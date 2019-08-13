@@ -10,7 +10,7 @@ int read(){
 }
 template<typename _TP>
 struct deque{
-	_TP q[100020];
+	_TP q[500020];
 	int head, tail;
 	deque():head(0),tail(0){}
 	bool empty(){return head == tail ;}
@@ -37,8 +37,8 @@ struct deque{
 	_TP get_back(int x){return q[tail-x-1];}
 };
 int n, m;
-int a[100020];
-int dp[100020];
+int a[500020];
+int dp[500020];
 ::deque<int> q;
 int getUp(int x, int y){
 	return (a[x]+a[y])*(a[x]-a[y]) + dp[x] - dp[y];

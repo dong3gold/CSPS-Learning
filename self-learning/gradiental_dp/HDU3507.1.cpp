@@ -12,12 +12,12 @@ int getDP(int i,int j)
     return dp[j]+m+(sum[i]-sum[j])*(sum[i]-sum[j]);
 }
 
-int getUP(int j,int k)  //yj-yk的部分
+int getUP(int j,int k)
 {
     return dp[j]+sum[j]*sum[j]-(dp[k]+sum[k]*sum[k]);
 }
 
-int getDOWN(int j,int k) //xj-xk的部分
+int getDOWN(int j,int k)
 {
     return 2*(sum[j]-sum[k]);
 }
