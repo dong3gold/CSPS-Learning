@@ -9,12 +9,12 @@ struct Martix{
 	T **p;
 	int n, m;
 	Martix<T>():n(0),m(0){p = (T**)malloc(sizeof(T));};
-	Martix<T>(int n, int m):n(n),m(m){p = (T**)malloc((sizeof(T*))*n);for(int i=0;i<m;i++) p[i]=(T*)malloc(sizeof(T)*m);} 
+	Martix<T>(int n, int m):n(n),m(m){p = (T**)malloc((sizeof(T*))*n);for(int i=0;i<n;i++) p[i]=(T*)malloc(sizeof(T)*m);} 
 	void adjust(int n, int m){
 		this->n = n; this->m = m;
 		delete(p);
 		p = (T**)malloc((sizeof(T*))*n);
-		for(int i=0;i<m;i++) p[i]=(T*)malloc(sizeof(T)*m);
+		for(int i=0;i<n;i++) p[i]=(T*)malloc(sizeof(T)*m);
 	}
 	Martix<T> operator = (const T**& x) {
 		for(int i = 0; i < n; i++){
