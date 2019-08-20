@@ -64,9 +64,8 @@ int main(){
 	freopen("slope.out", "w", stdout);
 	int n, x, y, p, q;
 	scanf("%d%d%d", &n, &p, &q);
-	double r = sqrt(p*p + q*q);
-	double s = p / r, c = q / r;
-	M[0][0] = s, M[0][1] = -c; M[1][0] = c; M[1][1] = s;
+	double k = atan((double)p/q);
+	M[0][0] = sin(k), M[0][1] = -cos(k); M[1][0] = cos(k); M[1][1] = sin(k);
 	for(int i = 0; i < n; i++){
 		scanf("%d%d", &x, &y);
 		rvec[i] = make_vector(x, y);
@@ -86,4 +85,5 @@ int main(){
 		}
 	}
 	printf("%d/%d", ansp / GCD(ansp, ansq), ansq / GCD(ansp, ansq));
+	return 0;
 }
