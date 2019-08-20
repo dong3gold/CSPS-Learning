@@ -40,7 +40,7 @@ long long int work2(){
 	long long int sum = 0; int i = 0, j = 0;
 	int ed = m - 1;
 	while(j < tot1){
-		auto low = lower_bound(X + i, X + ed, DEF[j]);
+		auto low = upper_bound(X + i, X + ed, DEF[j]);
 		*low = 0;
 		i = low - X + 1;
 		DEF[j++] = 0;
