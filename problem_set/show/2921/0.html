@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)https://gmoj.net/senior/#contest -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+		
+		<title>Gold Medal Online Judge System</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Fortuna Online Judge System Default Framework">
+		<meta name="author" content="moreD">
+		
+
+		<link href="../../_files/bootstrap.min.css" rel="stylesheet">
+		<link href="../../_files/bootstrap-responsive.min.css" rel="stylesheet">
+		<link href="../../_files/style.css" rel="stylesheet">
+
+		<script> OJTitle = "Gold Medal Online Judge System"; </script>
+		
+		<style>.cke{visibility:hidden;}</style>	
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+			
+		<![endif]-->
+	</head>
+
+<body onload="init_framework()">
+	<div id="nav_toggle" class="well" style="padding: 2px; position:fixed; top: 35px; left:0px">
+		<i id="icon_nav_toggle" class="icon-arrow-left"></i>
+	</div>
+	<div id="scroll_tip" class="well affix-top" style="padding: 2px; position:fixed; right:0px; bottom:120px" onclick="javascript:scroll(0,0)">
+		<i class="icon-arrow-up"></i>
+	</div>
+	
+	<div class="container-fluid">
+		<div class="row-fluid">
+		
+			<!-- Header -->
+			<div class="span12">
+				<div class="well" style="padding: 7px; min-height:560px">
+					<div class="tabbable tabs-left">
+						<ul id="navigation" class="nav nav-tabs pull-left">
+							<li>
+								<label id="countdown"></label>
+							</li>
+							<li>
+								<div id="userinfo" style="display: block;">	<div class="mb_10">
+			<div style="text-align:center; padding:3px; margin: 0 auto" class="well">
+				<img src="../../images/avatar.gif">
+			</div>
+			<div style="text-align:center; margin: 3px auto 0">
+				<span class="label label-info">您已被强制离线</span>
+			</div>
+		</a>
+	</div>
+</div>
+								<div class="clearfix"></div>
+							<li class="nav_bar" id="nav_home">
+								<a href="../../index.html">主页</a>
+							</li>
+							<li class="nav_bar active" id="nav_contest">
+								<a href="../../problem_set.html">比赛</a>
+							</li>
+						</ul>
+						
+						<div id="page_content" class="tab-content" style="float: none; display: block;"><link href="_files/tablewithpin.css" rel="stylesheet">
+							<div class="navbar">
+	<div class="navbar-inner">
+		<ul class="nav">
+			<li><a href="../../problem_set.html"><img src="../../images/narrow-left.png" width="17" height="17"></a></li>
+			<li><a href="../home/2921">主页</a></li>
+            <li><a href="../../problem_set.html">题目</a></li>		</ul>
+	</div>
+</div>
+
+<div class="row-fluid">
+ <div id="header">
+  <div style="text-align:center">
+   <h2>
+    6280. 【noip提高组模拟2】敏感词
+    <sub>
+     <br/>
+     (File IO):
+     <span style="color:red">
+      input:
+      <strong>
+       replace.in
+      </strong>
+      output:
+      <strong>
+       replace.out
+      </strong>
+     </span>
+    </sub>
+   </h2>
+   <div>
+    Time Limits:
+    <span class="badge badge-info">
+     1000 ms
+    </span>
+    Memory Limits:
+    <span class="badge badge-info">
+     524288 KB
+    </span>
+   </div>
+  </div>
+ </div>
+</div>
+
+<div class="row-fluid" style="margin-top:7px">
+ <div id="mainbar">
+  <div class="problem">
+   <div class="span12 well">
+    <fieldset>
+     <legend>
+      <h4>
+       Description
+      </h4>
+     </legend>
+     <div class="content">
+      有一个专制的国家，对于网络言论执行着严格的审查。
+      <br/>
+      最近"ab"成为了这个国家的敏感词，如果说出这个词就会被人间蒸发。
+      <br/>
+      所有的网民都会在发言之前仔细自我审查，并且达成了默契，把所有的"ab"替换成"bba"。
+      <br/>
+      然而这样并不能骗过审查，比如"aab"会被替换成"abba"，然后就会被【数据已删除】。
+      <br/>
+      于是网民们会重复替换下去，直到可以躲过审查。
+      <br/>
+      你的任务是在"bba"也被河蟹之前尽快帮网民们计算出需要的替换次数，为这个国家言论自由情况的改善做出一份努力。
+      <br/>
+      可悲的是替换次数会是一个天文数字，所以你只需要算出答案取模(10^9+7)的结果即可。
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Input
+       </h4>
+      </legend>
+      <div class="content">
+       一行一个串s，只包含a和b两种字符
+      </div>
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Output
+       </h4>
+      </legend>
+      <div class="content">
+       一行一个数，表示替换次数取模(10^9+7)的结果
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Input
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">样例输入0
+aab
+样例输入1
+aabaabaabaabaabaabaab</pre>
+      </div>
+      <!-- nl2br not needed in pre -->
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Output
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">样例输出0
+3
+样例输出1
+21837</pre>
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div class="well">
+    <fieldset>
+     <legend>
+      <h4>
+       Data Constraint
+      </h4>
+     </legend>
+     <div class="content">
+      设n为串长即|s|
+      <br/>
+      对于30%的数据，n&lt;=10
+      <br/>
+      对于另10%的数据，s串为1个a和(n-1)个b组成（如abb...bbb）
+      <br/>
+      对于另20%的数据，s串中不存在"ba"子串
+      <br/>
+      对于100%的数据，n&lt;=500000
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+  </div>
+ </div>
+</div>
+
+
+<div style="text-align:center"></div>
+
+</div>
+						
+						<div class="clearfix"></div>
+					</div>
+					
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="clearfix"></div>
+		
+		<!-- footer -->
+		<div class="row-fluid">
+			<div class="span12" id="copyleft">
+				<label id="server_time">Server time: Mon Aug 10 2019 11:45:14 GMT+0800 (中国标准时间)</label>				<a href="https://github.com/roastduck/fortuna-oj" target="_blank">Fortuna OJ 项目</a><br>
+				Author: <a href="https://github.com/moreD" target="_blank">moreD</a>, <a href="https://github.com/roastduck" target="_blank">RD</a>;
+				Collaborator: <a href="https://github.com/tarawa" target="_blank">twilight</a>, <a href="https://github.com/mchobbylong" target="_blank">McHobby</a><br>
+				Powered by CodeIgniter / Bootstrap<br>
+				Icons provided by <a href="http://glyphicons.com/">Glyphicons</a><br>
+							</div>
+		</div>
+		
+	</div>
+	
+	<div class="overlay" style="z-index: -1000; display: none; opacity: 0;"></div>
+
+
+
+</body></html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)https://gmoj.net/senior/#contest -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+		
+		<title>Gold Medal Online Judge System</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Fortuna Online Judge System Default Framework">
+		<meta name="author" content="moreD">
+		
+
+		<link href="../../_files/bootstrap.min.css" rel="stylesheet">
+		<link href="../../_files/bootstrap-responsive.min.css" rel="stylesheet">
+		<link href="../../_files/style.css" rel="stylesheet">
+
+		<script> OJTitle = "Gold Medal Online Judge System"; </script>
+		
+		<style>.cke{visibility:hidden;}</style>	
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+			
+		<![endif]-->
+	</head>
+
+<body onload="init_framework()">
+	<div id="nav_toggle" class="well" style="padding: 2px; position:fixed; top: 35px; left:0px">
+		<i id="icon_nav_toggle" class="icon-arrow-left"></i>
+	</div>
+	<div id="scroll_tip" class="well affix-top" style="padding: 2px; position:fixed; right:0px; bottom:120px" onclick="javascript:scroll(0,0)">
+		<i class="icon-arrow-up"></i>
+	</div>
+	
+	<div class="container-fluid">
+		<div class="row-fluid">
+		
+			<!-- Header -->
+			<div class="span12">
+				<div class="well" style="padding: 7px; min-height:560px">
+					<div class="tabbable tabs-left">
+						<ul id="navigation" class="nav nav-tabs pull-left">
+							<li>
+								<label id="countdown"></label>
+							</li>
+							<li>
+								<div id="userinfo" style="display: block;">	<div class="mb_10">
+			<div style="text-align:center; padding:3px; margin: 0 auto" class="well">
+				<img src="../../images/avatar.gif">
+			</div>
+			<div style="text-align:center; margin: 3px auto 0">
+				<span class="label label-info">您已被强制离线</span>
+			</div>
+		</a>
+	</div>
+</div>
+								<div class="clearfix"></div>
+							<li class="nav_bar" id="nav_home">
+								<a href="../../index.html">主页</a>
+							</li>
+							<li class="nav_bar active" id="nav_contest">
+								<a href="../../problem_set.html">比赛</a>
+							</li>
+						</ul>
+						
+						<div id="page_content" class="tab-content" style="float: none; display: block;"><link href="_files/tablewithpin.css" rel="stylesheet">
+							<div class="navbar">
+	<div class="navbar-inner">
+		<ul class="nav">
+			<li><a href="../../problem_set.html"><img src="../../images/narrow-left.png" width="17" height="17"></a></li>
+			<li><a href="../home/2864">主页</a></li>
+            <li><a href="../../problem_set.html">题目</a></li>		</ul>
+	</div>
+</div>
+
+<div class="row-fluid">
+ <div id="header">
+  <div style="text-align:center">
+   <h2>
+    3517. 空间航行(warp)
+    <sub>
+     <br/>
+     (File IO):
+     <span style="color:red">
+      input:
+      <strong>
+       warp.in
+      </strong>
+      output:
+      <strong>
+       warp.out
+      </strong>
+     </span>
+    </sub>
+   </h2>
+   <div>
+    Time Limits:
+    <span class="badge badge-info">
+     1000 ms
+    </span>
+    Memory Limits:
+    <span class="badge badge-info">
+     262144 KB
+    </span>
+   </div>
+  </div>
+ </div>
+</div>
+
+<div class="row-fluid" style="margin-top:7px">
+ <div id="mainbar">
+  <div class="problem">
+   <div class="span12 well">
+    <fieldset>
+     <legend>
+      <h4>
+       Description
+      </h4>
+     </legend>
+     <div class="content">
+      你是一艘战列巡洋舰的引擎操作人员，这艘船的船员在空间中侦测到了一些无法辨识的异常信号。你的指挥官给你下达了命令，让你制定航线，驾驶战列巡洋舰到达那里。
+      <br/>
+      <br/>
+      船上老旧的曲速引擎的速度是0.1AU/s。然而，在太空中分布着许多殖民星域，这些星域可以被看成一个球。在星域的内部，你可以在任何地方任意次跳跃到星域内部的任意一个点，不花费任何时间。
+      <br/>
+      <br/>
+      你希望算出到达终点的最短时间。
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Input
+       </h4>
+      </legend>
+      <div class="content">
+       输入包含多组测试数据。
+       <br/>
+       <br/>
+       对于每一组数据，第一行包含一个正整数n，表示殖民星域的数量。
+       <br/>
+       <br/>
+       接下来n 行，第i 行包含四个整数Xi，Yi，Zi，Ri，表示第i个星域的中心坐标为(Xi, Yi,Zi)，星域的半径是Ri。
+       <br/>
+       <br/>
+       接下来两行，第一行包含值Xa，Ya，Za，告诉你当前坐标为(Xa, Ya,Za)。
+       <br/>
+       <br/>
+       第二行包含值Xo，Yo，Zo，告诉你目的地坐标为(Xo, Yo,Zo)。
+       <br/>
+       <br/>
+       输入以一行单独的-1 结尾。所有坐标的单位都是天文单位（AU）。
+      </div>
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Output
+       </h4>
+      </legend>
+      <div class="content">
+       对于每一组输入数据，输出一行表示从目前的位置到达指定目的地的最短时间，取整到最近整数。输入保证取整是明确的。
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Input
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">1<br/>
+20 20 20 1<br/>
+0 0 0<br/>
+0 0 10<br/>
+1<br/>
+5 0 0 4<br/>
+0 0 0<br/>
+10 0 0<br/>
+-1</pre>
+      </div>
+      <!-- nl2br not needed in pre -->
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Output
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">100<br/>
+20</pre>
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div class="well">
+    <fieldset>
+     <legend>
+      <h4>
+       Data Constraint
+      </h4>
+     </legend>
+     <div class="content">
+      每个输入文件至多包含10 个测试数据。
+      <br/>
+      <br/>
+      对于10% 的数据，n = 0。
+      <br/>
+      <br/>
+      对于30% 的数据，0&lt;=n&lt;=10。
+      <br/>
+      <br/>
+      对于100% 的数据，0&lt;=n&lt;=100，所有坐标的绝对值&lt;=10000 ，半径r&lt;=10000。
+      <br/>
+      <br/>
+      你可以认为，你所在的星区的大小为无限大。
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+  </div>
+ </div>
+</div>
+
+
+<div style="text-align:center"></div>
+
+</div>
+						
+						<div class="clearfix"></div>
+					</div>
+					
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="clearfix"></div>
+		
+		<!-- footer -->
+		<div class="row-fluid">
+			<div class="span12" id="copyleft">
+				<label id="server_time">Server time: Mon Aug 10 2019 11:45:14 GMT+0800 (中国标准时间)</label>				<a href="https://github.com/roastduck/fortuna-oj" target="_blank">Fortuna OJ 项目</a><br>
+				Author: <a href="https://github.com/moreD" target="_blank">moreD</a>, <a href="https://github.com/roastduck" target="_blank">RD</a>;
+				Collaborator: <a href="https://github.com/tarawa" target="_blank">twilight</a>, <a href="https://github.com/mchobbylong" target="_blank">McHobby</a><br>
+				Powered by CodeIgniter / Bootstrap<br>
+				Icons provided by <a href="http://glyphicons.com/">Glyphicons</a><br>
+							</div>
+		</div>
+		
+	</div>
+	
+	<div class="overlay" style="z-index: -1000; display: none; opacity: 0;"></div>
+
+
+
+</body></html>

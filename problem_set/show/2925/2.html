@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)https://gmoj.net/senior/#contest -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+		
+		<title>Gold Medal Online Judge System</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Fortuna Online Judge System Default Framework">
+		<meta name="author" content="moreD">
+		
+
+		<link href="../../_files/bootstrap.min.css" rel="stylesheet">
+		<link href="../../_files/bootstrap-responsive.min.css" rel="stylesheet">
+		<link href="../../_files/style.css" rel="stylesheet">
+
+		<script> OJTitle = "Gold Medal Online Judge System"; </script>
+		
+		<style>.cke{visibility:hidden;}</style>	
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+			
+		<![endif]-->
+	</head>
+
+<body onload="init_framework()">
+	<div id="nav_toggle" class="well" style="padding: 2px; position:fixed; top: 35px; left:0px">
+		<i id="icon_nav_toggle" class="icon-arrow-left"></i>
+	</div>
+	<div id="scroll_tip" class="well affix-top" style="padding: 2px; position:fixed; right:0px; bottom:120px" onclick="javascript:scroll(0,0)">
+		<i class="icon-arrow-up"></i>
+	</div>
+	
+	<div class="container-fluid">
+		<div class="row-fluid">
+		
+			<!-- Header -->
+			<div class="span12">
+				<div class="well" style="padding: 7px; min-height:560px">
+					<div class="tabbable tabs-left">
+						<ul id="navigation" class="nav nav-tabs pull-left">
+							<li>
+								<label id="countdown"></label>
+							</li>
+							<li>
+								<div id="userinfo" style="display: block;">	<div class="mb_10">
+			<div style="text-align:center; padding:3px; margin: 0 auto" class="well">
+				<img src="../../images/avatar.gif">
+			</div>
+			<div style="text-align:center; margin: 3px auto 0">
+				<span class="label label-info">您已被强制离线</span>
+			</div>
+		</a>
+	</div>
+</div>
+								<div class="clearfix"></div>
+							<li class="nav_bar" id="nav_home">
+								<a href="../../index.html">主页</a>
+							</li>
+							<li class="nav_bar active" id="nav_contest">
+								<a href="../../problem_set.html">比赛</a>
+							</li>
+						</ul>
+						
+						<div id="page_content" class="tab-content" style="float: none; display: block;"><link href="_files/tablewithpin.css" rel="stylesheet">
+							<div class="navbar">
+	<div class="navbar-inner">
+		<ul class="nav">
+			<li><a href="../../problem_set.html"><img src="../../images/narrow-left.png" width="17" height="17"></a></li>
+			<li><a href="../home/2925">主页</a></li>
+            <li><a href="../../problem_set.html">题目</a></li>		</ul>
+	</div>
+</div>
+
+<div class="row-fluid">
+ <div id="header">
+  <div style="text-align:center">
+   <h2>
+    6402. 【NOIP2019模拟11.01】Cover
+    <sub>
+     <br/>
+     (File IO):
+     <span style="color:red">
+      input:
+      <strong>
+       cover.in
+      </strong>
+      output:
+      <strong>
+       cover.out
+      </strong>
+     </span>
+    </sub>
+   </h2>
+   <div>
+    Time Limits:
+    <span class="badge badge-info">
+     1500 ms
+    </span>
+    Memory Limits:
+    <span class="badge badge-info">
+     528400 KB
+    </span>
+   </div>
+  </div>
+ </div>
+ <div class="row-fluid" style="margin-top:7px">
+  <div id="mainbar">
+   <div class="problem">
+    <div class="span12 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Description
+       </h4>
+      </legend>
+      <div class="content">
+       <br/>
+       小 A 现在想用 𝑚 条彩灯去装饰家中的走廊，走廊可以视作一个 [1, 𝑛] 的区间，每一条彩灯都能覆盖一个子区间，并且有一个特定的美观程度。
+       <br/>
+       然而为了降低装饰的难度，彩灯能够覆盖的区间两两之间只有包含和不相交的关系，同时为了避免光污染，他希望每个 [1, 𝑛] 中的点至多被 𝑘 条彩灯覆盖。
+       <br/>
+       现在小 A 希望你能告诉他，𝑘 = 1, 2, … , 𝑚 时，选出的彩灯的最大美观程度之和时多少。
+      </div>
+     </fieldset>
+    </div>
+    <div class="clearfix">
+    </div>
+    <div>
+     <div class="span6 well">
+      <fieldset>
+       <legend>
+        <h4>
+         Input
+        </h4>
+       </legend>
+       <div class="content">
+        第一行两个个整数 𝑛, 𝑚 表示区间的长度与彩灯的数量。
+        <br/>
+        接下来 𝑚 行，每行三个整数 𝑙𝑖 , 𝑟𝑖 , 𝑎𝑖 表示一条彩灯能够覆盖的区间以及它的美观程度。
+       </div>
+      </fieldset>
+     </div>
+     <div class="span6 well">
+      <fieldset>
+       <legend>
+        <h4>
+         Output
+        </h4>
+       </legend>
+       <div class="content">
+        输出一行 𝑚 个整数，第 𝑖 个数表示 𝑘 = 𝑖 时的最大美观程度。
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="clearfix">
+    </div>
+    <div>
+     <div class="span6 well">
+      <fieldset>
+       <legend>
+        <h4>
+         Sample Input
+        </h4>
+       </legend>
+       <div class="content">
+        <pre style="border:none;font-size:110%">25 6
+1 2 10
+2 3 10
+1 3 21
+3 4 10
+4 5 10
+3 5 19 </pre>
+       </div>
+       <!-- nl2br not needed in pre -->
+      </fieldset>
+     </div>
+     <div class="span6 well">
+      <fieldset>
+       <legend>
+        <h4>
+         Sample Output
+        </h4>
+       </legend>
+       <div class="content">
+        <pre style="border:none;font-size:110%">41 80 80 80 80 80</pre>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="clearfix">
+    </div>
+    <div class="well">
+     <fieldset>
+      <legend>
+       <h4>
+        Data Constraint
+       </h4>
+      </legend>
+      <div class="content">
+       对于 25% 的数据，𝑚 ≤ 20
+       <br/>
+       对于 45% 的数据，𝑛, 𝑚 ≤ 5000
+       <br/>
+       对于另外 25% 的数据，所有 𝑎𝑖 相同
+       <br/>
+       对于 100% 的数据，1 ≤ 𝑙𝑖 ≤ 𝑟𝑖 ≤ 𝑛, 𝑚 ≤ 300000, 𝑎𝑖 ≤ 10^9
+      </div>
+     </fieldset>
+    </div>
+    <div class="clearfix">
+    </div>
+   </div>
+  </div>
+ </div>
+ <div style="text-align:center">
+ </div>
+</div>
+
+<div class="row-fluid" style="margin-top:7px">
+ <div id="mainbar">
+  <div class="problem">
+   <div class="span12 well">
+    <fieldset>
+     <legend>
+      <h4>
+       Description
+      </h4>
+     </legend>
+     <div class="content">
+      <br/>
+      小 A 现在想用 𝑚 条彩灯去装饰家中的走廊，走廊可以视作一个 [1, 𝑛] 的区间，每一条彩灯都能覆盖一个子区间，并且有一个特定的美观程度。
+      <br/>
+      然而为了降低装饰的难度，彩灯能够覆盖的区间两两之间只有包含和不相交的关系，同时为了避免光污染，他希望每个 [1, 𝑛] 中的点至多被 𝑘 条彩灯覆盖。
+      <br/>
+      现在小 A 希望你能告诉他，𝑘 = 1, 2, … , 𝑚 时，选出的彩灯的最大美观程度之和时多少。
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Input
+       </h4>
+      </legend>
+      <div class="content">
+       第一行两个个整数 𝑛, 𝑚 表示区间的长度与彩灯的数量。
+       <br/>
+       接下来 𝑚 行，每行三个整数 𝑙𝑖 , 𝑟𝑖 , 𝑎𝑖 表示一条彩灯能够覆盖的区间以及它的美观程度。
+      </div>
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Output
+       </h4>
+      </legend>
+      <div class="content">
+       输出一行 𝑚 个整数，第 𝑖 个数表示 𝑘 = 𝑖 时的最大美观程度。
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Input
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">25 6
+1 2 10
+2 3 10
+1 3 21
+3 4 10
+4 5 10
+3 5 19 </pre>
+      </div>
+      <!-- nl2br not needed in pre -->
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Output
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">41 80 80 80 80 80</pre>
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div class="well">
+    <fieldset>
+     <legend>
+      <h4>
+       Data Constraint
+      </h4>
+     </legend>
+     <div class="content">
+      对于 25% 的数据，𝑚 ≤ 20
+      <br/>
+      对于 45% 的数据，𝑛, 𝑚 ≤ 5000
+      <br/>
+      对于另外 25% 的数据，所有 𝑎𝑖 相同
+      <br/>
+      对于 100% 的数据，1 ≤ 𝑙𝑖 ≤ 𝑟𝑖 ≤ 𝑛, 𝑚 ≤ 300000, 𝑎𝑖 ≤ 10^9
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+  </div>
+ </div>
+</div>
+
+<div class="row-fluid" style="margin-top:7px">
+ <div id="mainbar">
+  <div class="problem">
+   <div class="span12 well">
+    <fieldset>
+     <legend>
+      <h4>
+       Description
+      </h4>
+     </legend>
+     <div class="content">
+      <br/>
+      小 A 现在想用 𝑚 条彩灯去装饰家中的走廊，走廊可以视作一个 [1, 𝑛] 的区间，每一条彩灯都能覆盖一个子区间，并且有一个特定的美观程度。
+      <br/>
+      然而为了降低装饰的难度，彩灯能够覆盖的区间两两之间只有包含和不相交的关系，同时为了避免光污染，他希望每个 [1, 𝑛] 中的点至多被 𝑘 条彩灯覆盖。
+      <br/>
+      现在小 A 希望你能告诉他，𝑘 = 1, 2, … , 𝑚 时，选出的彩灯的最大美观程度之和时多少。
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Input
+       </h4>
+      </legend>
+      <div class="content">
+       第一行两个个整数 𝑛, 𝑚 表示区间的长度与彩灯的数量。
+       <br/>
+       接下来 𝑚 行，每行三个整数 𝑙𝑖 , 𝑟𝑖 , 𝑎𝑖 表示一条彩灯能够覆盖的区间以及它的美观程度。
+      </div>
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Output
+       </h4>
+      </legend>
+      <div class="content">
+       输出一行 𝑚 个整数，第 𝑖 个数表示 𝑘 = 𝑖 时的最大美观程度。
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Input
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">25 6
+1 2 10
+2 3 10
+1 3 21
+3 4 10
+4 5 10
+3 5 19 </pre>
+      </div>
+      <!-- nl2br not needed in pre -->
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Output
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">41 80 80 80 80 80</pre>
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div class="well">
+    <fieldset>
+     <legend>
+      <h4>
+       Data Constraint
+      </h4>
+     </legend>
+     <div class="content">
+      对于 25% 的数据，𝑚 ≤ 20
+      <br/>
+      对于 45% 的数据，𝑛, 𝑚 ≤ 5000
+      <br/>
+      对于另外 25% 的数据，所有 𝑎𝑖 相同
+      <br/>
+      对于 100% 的数据，1 ≤ 𝑙𝑖 ≤ 𝑟𝑖 ≤ 𝑛, 𝑚 ≤ 300000, 𝑎𝑖 ≤ 10^9
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+  </div>
+ </div>
+</div>
+
+
+<div style="text-align:center"></div>
+
+</div>
+						
+						<div class="clearfix"></div>
+					</div>
+					
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="clearfix"></div>
+		
+		<!-- footer -->
+		<div class="row-fluid">
+			<div class="span12" id="copyleft">
+				<label id="server_time">Server time: Mon Aug 10 2019 11:45:14 GMT+0800 (中国标准时间)</label>				<a href="https://github.com/roastduck/fortuna-oj" target="_blank">Fortuna OJ 项目</a><br>
+				Author: <a href="https://github.com/moreD" target="_blank">moreD</a>, <a href="https://github.com/roastduck" target="_blank">RD</a>;
+				Collaborator: <a href="https://github.com/tarawa" target="_blank">twilight</a>, <a href="https://github.com/mchobbylong" target="_blank">McHobby</a><br>
+				Powered by CodeIgniter / Bootstrap<br>
+				Icons provided by <a href="http://glyphicons.com/">Glyphicons</a><br>
+							</div>
+		</div>
+		
+	</div>
+	
+	<div class="overlay" style="z-index: -1000; display: none; opacity: 0;"></div>
+
+
+
+</body></html>

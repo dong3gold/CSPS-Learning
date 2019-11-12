@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)https://gmoj.net/senior/#contest -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+		
+		<title>Gold Medal Online Judge System</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Fortuna Online Judge System Default Framework">
+		<meta name="author" content="moreD">
+		
+
+		<link href="../../_files/bootstrap.min.css" rel="stylesheet">
+		<link href="../../_files/bootstrap-responsive.min.css" rel="stylesheet">
+		<link href="../../_files/style.css" rel="stylesheet">
+
+		<script> OJTitle = "Gold Medal Online Judge System"; </script>
+		
+		<style>.cke{visibility:hidden;}</style>	
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+			
+		<![endif]-->
+	</head>
+
+<body onload="init_framework()">
+	<div id="nav_toggle" class="well" style="padding: 2px; position:fixed; top: 35px; left:0px">
+		<i id="icon_nav_toggle" class="icon-arrow-left"></i>
+	</div>
+	<div id="scroll_tip" class="well affix-top" style="padding: 2px; position:fixed; right:0px; bottom:120px" onclick="javascript:scroll(0,0)">
+		<i class="icon-arrow-up"></i>
+	</div>
+	
+	<div class="container-fluid">
+		<div class="row-fluid">
+		
+			<!-- Header -->
+			<div class="span12">
+				<div class="well" style="padding: 7px; min-height:560px">
+					<div class="tabbable tabs-left">
+						<ul id="navigation" class="nav nav-tabs pull-left">
+							<li>
+								<label id="countdown"></label>
+							</li>
+							<li>
+								<div id="userinfo" style="display: block;">	<div class="mb_10">
+			<div style="text-align:center; padding:3px; margin: 0 auto" class="well">
+				<img src="../../images/avatar.gif">
+			</div>
+			<div style="text-align:center; margin: 3px auto 0">
+				<span class="label label-info">您已被强制离线</span>
+			</div>
+		</a>
+	</div>
+</div>
+								<div class="clearfix"></div>
+							<li class="nav_bar" id="nav_home">
+								<a href="../../index.html">主页</a>
+							</li>
+							<li class="nav_bar active" id="nav_contest">
+								<a href="../../problem_set.html">比赛</a>
+							</li>
+						</ul>
+						
+						<div id="page_content" class="tab-content" style="float: none; display: block;"><link href="_files/tablewithpin.css" rel="stylesheet">
+							<div class="navbar">
+	<div class="navbar-inner">
+		<ul class="nav">
+			<li><a href="../../problem_set.html"><img src="../../images/narrow-left.png" width="17" height="17"></a></li>
+			<li><a href="../home/2910">主页</a></li>
+            <li><a href="../../problem_set.html">题目</a></li>		</ul>
+	</div>
+</div>
+
+<div class="row-fluid">
+ <div id="header">
+  <div style="text-align:center">
+   <h2>
+    3803. 数列
+    <sub>
+     (Standard IO)
+    </sub>
+   </h2>
+   <div>
+    Time Limits:
+    <span class="badge badge-info">
+     4000 ms
+    </span>
+    Memory Limits:
+    <span class="badge badge-info">
+     262144 KB
+    </span>
+   </div>
+  </div>
+ </div>
+ <div class="row-fluid" style="margin-top:7px">
+  <div id="mainbar">
+   <div class="problem">
+    <div class="span12 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Description
+       </h4>
+      </legend>
+      <div class="content">
+       吾妻玲二接到Scythe Master的指令去暗杀反抗他们的黑社会组织头目，他做了详细的调查，发现只要可以进入头目的卧室便可以轻松射杀头目，但是卧室的门上设置了强力的电子锁，只有输入正确的密码才能进入卧室。玲二已经知道了密码的构成规则，即有一个数列a，他需要求出一个等长的数列b满足
+       <br/>
+       <img alt="" src="data:image/png;base64,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" style="height:41px; width:91px"/>
+       最小且数列b中的数两两的最大公约数为1，但是这个问题他难以解决，为了尽快完成任务，他只好求助于擅长编程的你来帮他得到密码。
+      </div>
+     </fieldset>
+    </div>
+    <div class="clearfix">
+    </div>
+    <div>
+     <div class="span6 well">
+      <fieldset>
+       <legend>
+        <h4>
+         Input
+        </h4>
+       </legend>
+       <div class="content">
+        第1行： 1个整数N表示数列a的长度。
+        <br/>
+        第2行：N个整数分别表示数列a的每一项
+       </div>
+      </fieldset>
+     </div>
+     <div class="span6 well">
+      <fieldset>
+       <legend>
+        <h4>
+         Output
+        </h4>
+       </legend>
+       <div class="content">
+        输出一行N个数表示数列b，每两个数之间用空格隔开，如果有多个数列b满足要求，输出任意一个即可。
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="clearfix">
+    </div>
+    <div>
+     <div class="span6 well">
+      <fieldset>
+       <legend>
+        <h4>
+         Sample Input
+        </h4>
+       </legend>
+       <div class="content">
+        <pre style="border:none;font-size:110%">5<br/>1 6 4 2 8</pre>
+       </div>
+       <!-- nl2br not needed in pre -->
+      </fieldset>
+     </div>
+     <div class="span6 well">
+      <fieldset>
+       <legend>
+        <h4>
+         Sample Output
+        </h4>
+       </legend>
+       <div class="content">
+        <pre style="border:none;font-size:110%">1 5 3 1 8</pre>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="clearfix">
+    </div>
+    <div class="well">
+     <fieldset>
+      <legend>
+       <h4>
+        Data Constraint
+       </h4>
+      </legend>
+      <div class="content">
+       60%     1&lt;=N&lt;=10
+       <br/>
+       100%    1&lt;=N&lt;=100   1&lt;=Ai&lt;=30
+      </div>
+     </fieldset>
+    </div>
+    <div class="clearfix">
+    </div>
+   </div>
+  </div>
+ </div>
+ <div style="text-align:center">
+ </div>
+</div>
+
+<div class="row-fluid" style="margin-top:7px">
+ <div id="mainbar">
+  <div class="problem">
+   <div class="span12 well">
+    <fieldset>
+     <legend>
+      <h4>
+       Description
+      </h4>
+     </legend>
+     <div class="content">
+      吾妻玲二接到Scythe Master的指令去暗杀反抗他们的黑社会组织头目，他做了详细的调查，发现只要可以进入头目的卧室便可以轻松射杀头目，但是卧室的门上设置了强力的电子锁，只有输入正确的密码才能进入卧室。玲二已经知道了密码的构成规则，即有一个数列a，他需要求出一个等长的数列b满足
+      <br/>
+      <img alt="" src="data:image/png;base64,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" style="height:41px; width:91px"/>
+      最小且数列b中的数两两的最大公约数为1，但是这个问题他难以解决，为了尽快完成任务，他只好求助于擅长编程的你来帮他得到密码。
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Input
+       </h4>
+      </legend>
+      <div class="content">
+       第1行： 1个整数N表示数列a的长度。
+       <br/>
+       第2行：N个整数分别表示数列a的每一项
+      </div>
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Output
+       </h4>
+      </legend>
+      <div class="content">
+       输出一行N个数表示数列b，每两个数之间用空格隔开，如果有多个数列b满足要求，输出任意一个即可。
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Input
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">5<br/>1 6 4 2 8</pre>
+      </div>
+      <!-- nl2br not needed in pre -->
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Output
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">1 5 3 1 8</pre>
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div class="well">
+    <fieldset>
+     <legend>
+      <h4>
+       Data Constraint
+      </h4>
+     </legend>
+     <div class="content">
+      60%     1&lt;=N&lt;=10
+      <br/>
+      100%    1&lt;=N&lt;=100   1&lt;=Ai&lt;=30
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+  </div>
+ </div>
+</div>
+
+<div class="row-fluid" style="margin-top:7px">
+ <div id="mainbar">
+  <div class="problem">
+   <div class="span12 well">
+    <fieldset>
+     <legend>
+      <h4>
+       Description
+      </h4>
+     </legend>
+     <div class="content">
+      吾妻玲二接到Scythe Master的指令去暗杀反抗他们的黑社会组织头目，他做了详细的调查，发现只要可以进入头目的卧室便可以轻松射杀头目，但是卧室的门上设置了强力的电子锁，只有输入正确的密码才能进入卧室。玲二已经知道了密码的构成规则，即有一个数列a，他需要求出一个等长的数列b满足
+      <br/>
+      <img alt="" src="data:image/png;base64,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" style="height:41px; width:91px"/>
+      最小且数列b中的数两两的最大公约数为1，但是这个问题他难以解决，为了尽快完成任务，他只好求助于擅长编程的你来帮他得到密码。
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Input
+       </h4>
+      </legend>
+      <div class="content">
+       第1行： 1个整数N表示数列a的长度。
+       <br/>
+       第2行：N个整数分别表示数列a的每一项
+      </div>
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Output
+       </h4>
+      </legend>
+      <div class="content">
+       输出一行N个数表示数列b，每两个数之间用空格隔开，如果有多个数列b满足要求，输出任意一个即可。
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Input
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">5<br/>1 6 4 2 8</pre>
+      </div>
+      <!-- nl2br not needed in pre -->
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Output
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">1 5 3 1 8</pre>
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div class="well">
+    <fieldset>
+     <legend>
+      <h4>
+       Data Constraint
+      </h4>
+     </legend>
+     <div class="content">
+      60%     1&lt;=N&lt;=10
+      <br/>
+      100%    1&lt;=N&lt;=100   1&lt;=Ai&lt;=30
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+  </div>
+ </div>
+</div>
+
+
+<div style="text-align:center"></div>
+
+</div>
+						
+						<div class="clearfix"></div>
+					</div>
+					
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="clearfix"></div>
+		
+		<!-- footer -->
+		<div class="row-fluid">
+			<div class="span12" id="copyleft">
+				<label id="server_time">Server time: Mon Aug 10 2019 11:45:14 GMT+0800 (中国标准时间)</label>				<a href="https://github.com/roastduck/fortuna-oj" target="_blank">Fortuna OJ 项目</a><br>
+				Author: <a href="https://github.com/moreD" target="_blank">moreD</a>, <a href="https://github.com/roastduck" target="_blank">RD</a>;
+				Collaborator: <a href="https://github.com/tarawa" target="_blank">twilight</a>, <a href="https://github.com/mchobbylong" target="_blank">McHobby</a><br>
+				Powered by CodeIgniter / Bootstrap<br>
+				Icons provided by <a href="http://glyphicons.com/">Glyphicons</a><br>
+							</div>
+		</div>
+		
+	</div>
+	
+	<div class="overlay" style="z-index: -1000; display: none; opacity: 0;"></div>
+
+
+
+</body></html>

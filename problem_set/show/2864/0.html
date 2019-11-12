@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)https://gmoj.net/senior/#contest -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+		
+		<title>Gold Medal Online Judge System</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Fortuna Online Judge System Default Framework">
+		<meta name="author" content="moreD">
+		
+
+		<link href="../../_files/bootstrap.min.css" rel="stylesheet">
+		<link href="../../_files/bootstrap-responsive.min.css" rel="stylesheet">
+		<link href="../../_files/style.css" rel="stylesheet">
+
+		<script> OJTitle = "Gold Medal Online Judge System"; </script>
+		
+		<style>.cke{visibility:hidden;}</style>	
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+			
+		<![endif]-->
+	</head>
+
+<body onload="init_framework()">
+	<div id="nav_toggle" class="well" style="padding: 2px; position:fixed; top: 35px; left:0px">
+		<i id="icon_nav_toggle" class="icon-arrow-left"></i>
+	</div>
+	<div id="scroll_tip" class="well affix-top" style="padding: 2px; position:fixed; right:0px; bottom:120px" onclick="javascript:scroll(0,0)">
+		<i class="icon-arrow-up"></i>
+	</div>
+	
+	<div class="container-fluid">
+		<div class="row-fluid">
+		
+			<!-- Header -->
+			<div class="span12">
+				<div class="well" style="padding: 7px; min-height:560px">
+					<div class="tabbable tabs-left">
+						<ul id="navigation" class="nav nav-tabs pull-left">
+							<li>
+								<label id="countdown"></label>
+							</li>
+							<li>
+								<div id="userinfo" style="display: block;">	<div class="mb_10">
+			<div style="text-align:center; padding:3px; margin: 0 auto" class="well">
+				<img src="../../images/avatar.gif">
+			</div>
+			<div style="text-align:center; margin: 3px auto 0">
+				<span class="label label-info">您已被强制离线</span>
+			</div>
+		</a>
+	</div>
+</div>
+								<div class="clearfix"></div>
+							<li class="nav_bar" id="nav_home">
+								<a href="../../index.html">主页</a>
+							</li>
+							<li class="nav_bar active" id="nav_contest">
+								<a href="../../problem_set.html">比赛</a>
+							</li>
+						</ul>
+						
+						<div id="page_content" class="tab-content" style="float: none; display: block;"><link href="_files/tablewithpin.css" rel="stylesheet">
+							<div class="navbar">
+	<div class="navbar-inner">
+		<ul class="nav">
+			<li><a href="../../problem_set.html"><img src="../../images/narrow-left.png" width="17" height="17"></a></li>
+			<li><a href="../home/2864">主页</a></li>
+            <li><a href="../../problem_set.html">题目</a></li>		</ul>
+	</div>
+</div>
+
+<div class="row-fluid">
+ <div id="header">
+  <div style="text-align:center">
+   <h2>
+    3514. 最小比例(ratio)
+    <sub>
+     <br/>
+     (File IO):
+     <span style="color:red">
+      input:
+      <strong>
+       ratio.in
+      </strong>
+      output:
+      <strong>
+       ratio.out
+      </strong>
+     </span>
+    </sub>
+   </h2>
+   <div>
+    Time Limits:
+    <span class="badge badge-info">
+     1000 ms
+    </span>
+    Memory Limits:
+    <span class="badge badge-info">
+     131072 KB
+    </span>
+   </div>
+  </div>
+ </div>
+</div>
+
+<div class="row-fluid" style="margin-top:7px">
+ <div id="mainbar">
+  <div class="problem">
+   <div class="span12 well">
+    <fieldset>
+     <legend>
+      <h4>
+       Description
+      </h4>
+     </legend>
+     <div class="content">
+      图中共有N个点的完全图，每条边都有权值，每个点也有权值。要求选出M个点和M-1条边，构成一棵树，使得：
+      <br/>
+      <br/>
+      <img alt="" src="data:image/png;base64,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" style="height:51px; width:161px"/>
+      <br/>
+      <br/>
+      即所有边的权值与所有点的权值之和的比率最小。
+      <br/>
+      <br/>
+      给定N和M，以及N个点的权值，和所有的边权，要求M个点的最小比率生成树。
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Input
+       </h4>
+      </legend>
+      <div class="content">
+       第一行包含两个整数N和M(2&lt;=N&lt;=15，2&lt;=M&lt;=N)，表示点数和生成树的点数。
+       <br/>
+       <br/>
+       接下来一行N个整数，表示N个点的边权。
+       <br/>
+       <br/>
+       最后N行，每行N列，表示完全图中的边权。所有点权和边权都在[1,100]之间。
+      </div>
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Output
+       </h4>
+      </legend>
+      <div class="content">
+       输出最小比率生成树的M个点。当答案出现多种时，要求输出的第一个点的编号尽量小，第一个相同，则第二个点的编号尽量小，依次类推，中间用空格分开。编号从1开始。
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Input
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">输入1：<br/>
+3 2<br/>
+30 20 10<br/>
+0 6 2<br/>
+6 0 3<br/>
+2 3 0<br/>
+输入2：<br/>
+2 2<br/>
+1 1<br/>
+0 2<br/>
+2 0</pre>
+      </div>
+      <!-- nl2br not needed in pre -->
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Output
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">输出1：<br/>
+1 3<br/>
+输出2：<br/>
+1 2</pre>
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div class="well">
+    <fieldset>
+     <legend>
+      <h4>
+       Data Constraint
+      </h4>
+     </legend>
+     <div class="content">
+      对于30%数据，N&lt;=5。
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+  </div>
+ </div>
+</div>
+
+
+<div style="text-align:center"></div>
+
+</div>
+						
+						<div class="clearfix"></div>
+					</div>
+					
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="clearfix"></div>
+		
+		<!-- footer -->
+		<div class="row-fluid">
+			<div class="span12" id="copyleft">
+				<label id="server_time">Server time: Mon Aug 10 2019 11:45:14 GMT+0800 (中国标准时间)</label>				<a href="https://github.com/roastduck/fortuna-oj" target="_blank">Fortuna OJ 项目</a><br>
+				Author: <a href="https://github.com/moreD" target="_blank">moreD</a>, <a href="https://github.com/roastduck" target="_blank">RD</a>;
+				Collaborator: <a href="https://github.com/tarawa" target="_blank">twilight</a>, <a href="https://github.com/mchobbylong" target="_blank">McHobby</a><br>
+				Powered by CodeIgniter / Bootstrap<br>
+				Icons provided by <a href="http://glyphicons.com/">Glyphicons</a><br>
+							</div>
+		</div>
+		
+	</div>
+	
+	<div class="overlay" style="z-index: -1000; display: none; opacity: 0;"></div>
+
+
+
+</body></html>

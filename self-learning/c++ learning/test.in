@@ -1,0 +1,2 @@
+Hello FILE;
+(However, scanf() is unable to read the word "FILE" because there's a whole space between it and "Hello")

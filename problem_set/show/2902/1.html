@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)https://gmoj.net/senior/#contest -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+		
+		<title>Gold Medal Online Judge System</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Fortuna Online Judge System Default Framework">
+		<meta name="author" content="moreD">
+		
+
+		<link href="../../_files/bootstrap.min.css" rel="stylesheet">
+		<link href="../../_files/bootstrap-responsive.min.css" rel="stylesheet">
+		<link href="../../_files/style.css" rel="stylesheet">
+
+		<script> OJTitle = "Gold Medal Online Judge System"; </script>
+		
+		<style>.cke{visibility:hidden;}</style>	
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+			
+		<![endif]-->
+	</head>
+
+<body onload="init_framework()">
+	<div id="nav_toggle" class="well" style="padding: 2px; position:fixed; top: 35px; left:0px">
+		<i id="icon_nav_toggle" class="icon-arrow-left"></i>
+	</div>
+	<div id="scroll_tip" class="well affix-top" style="padding: 2px; position:fixed; right:0px; bottom:120px" onclick="javascript:scroll(0,0)">
+		<i class="icon-arrow-up"></i>
+	</div>
+	
+	<div class="container-fluid">
+		<div class="row-fluid">
+		
+			<!-- Header -->
+			<div class="span12">
+				<div class="well" style="padding: 7px; min-height:560px">
+					<div class="tabbable tabs-left">
+						<ul id="navigation" class="nav nav-tabs pull-left">
+							<li>
+								<label id="countdown"></label>
+							</li>
+							<li>
+								<div id="userinfo" style="display: block;">	<div class="mb_10">
+			<div style="text-align:center; padding:3px; margin: 0 auto" class="well">
+				<img src="../../images/avatar.gif">
+			</div>
+			<div style="text-align:center; margin: 3px auto 0">
+				<span class="label label-info">您已被强制离线</span>
+			</div>
+		</a>
+	</div>
+</div>
+								<div class="clearfix"></div>
+							<li class="nav_bar" id="nav_home">
+								<a href="../../index.html">主页</a>
+							</li>
+							<li class="nav_bar active" id="nav_contest">
+								<a href="../../problem_set.html">比赛</a>
+							</li>
+						</ul>
+						
+						<div id="page_content" class="tab-content" style="float: none; display: block;"><link href="_files/tablewithpin.css" rel="stylesheet">
+							<div class="navbar">
+	<div class="navbar-inner">
+		<ul class="nav">
+			<li><a href="../../problem_set.html"><img src="../../images/narrow-left.png" width="17" height="17"></a></li>
+			<li><a href="../home/2902">主页</a></li>
+            <li><a href="../../problem_set.html">题目</a></li>		</ul>
+	</div>
+</div>
+
+<div class="row-fluid">
+ <div id="header">
+  <div style="text-align:center">
+   <h2>
+    1793. 教主泡嫦娥
+    <sub>
+     (Standard IO)
+    </sub>
+   </h2>
+   <div>
+    Time Limits:
+    <span class="badge badge-info">
+     1000 ms
+    </span>
+    Memory Limits:
+    <span class="badge badge-info">
+     65536 KB
+    </span>
+   </div>
+  </div>
+ </div>
+</div>
+
+<div class="row-fluid" style="margin-top:7px">
+ <div id="mainbar">
+  <div class="problem">
+   <div class="span12 well">
+    <fieldset>
+     <legend>
+      <h4>
+       Description
+      </h4>
+     </legend>
+     <div class="content">
+      【问题背景】
+      <br/>
+      2012年12月21日下午3点14分35秒，全世界各国的总统以及领导人都已经汇聚在中国的方舟上。
+      <br/>
+      但也有很多百姓平民想搭乘方舟，毕竟他们不想就这么离开世界，所以他们决定要么登上方舟，要么毁掉方舟。
+      <br/>
+      <br/>
+      LHX教主听说了这件事之后，果断扔掉了手中的船票。在地球即将毁灭的那一霎那，教主自制了一个小型火箭，奔向了月球……
+      <br/>
+      <br/>
+      教主登上月球之后才发现，他的女朋友忘记带到月球了，为此他哭了一个月。
+      <br/>
+      但细心的教主立马想起了小学学过的一篇课文，叫做《嫦娥奔月》，于是教主决定，让嫦娥做自己的新任女友。
+      <br/>
+      <br/>
+      【题目描述】
+      <br/>
+      教主拿出他最新研制的LHX(Let's be Happy Xixi*^__^*)卫星定位系统，轻松地定位到了广寒宫的位置。
+      <br/>
+      见到嫦娥之后，教主用温柔而犀利的目光瞬间迷倒了嫦娥，但嫦娥也想考验一下教主。
+      <br/>
+      嫦娥对教主说：“看到那边的环形山了么？你从上面那个环走一圈我就答应你～”
+      <br/>
+      <br/>
+      教主用LHX卫星定位系统查看了环形山的地形，环形山上一共有N个可以识别的落脚点，以顺时针1~N编号。每个落脚点都有一个海拔，相邻的落脚点海拔不同（第1个和第N个相邻）。
+      <br/>
+      教主可以选择从任意一个落脚点开始，顺时针或者逆时针走，每次走到一个相邻的落脚点，并且最后回到这个落脚点。
+      <br/>
+      教主在任意时刻，都会有“上升”、“下降”两种状态的其中一种。
+      <br/>
+      <br/>
+      当教主从第i个落脚点，走到第j个落脚点的时候（i和j相邻）
+      <br/>
+      j的海拔高于i的海拔：如果教主处于上升状态，教主需要耗费两段高度差的绝对值的体力；否则耗费高度差平方的体力。
+      <br/>
+      j的海拔低于i的海拔：如果教主处于下降状态，教主需要耗费两段高度差的绝对值的体力；否则耗费高度差平方的体力。
+      <br/>
+      <br/>
+      当然，教主可以在到达一个落脚点的时候，选择切换自己的状态（上升→下降，下降→上升），每次切换需要耗费M点的体力。在起点的时候，教主可以自行选择状态并且不算切换状态，也就是说刚开始教主可以选择任意状态并且不耗费体力。
+      <br/>
+      <br/>
+      教主希望花费最少的体力，让嫦娥成为自己的女朋友。
+      <br/>
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Input
+       </h4>
+      </legend>
+      <div class="content">
+       输入的第一行为两个正整数N与M，即落脚点的个数与切换状态所消耗的体力。
+       <br/>
+       接下来一行包含空格隔开的N个正整数，表示了每个落脚点的高度，题目保证了相邻落脚点高度不相同。
+       <br/>
+      </div>
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Output
+       </h4>
+      </legend>
+      <div class="content">
+       输出仅包含一个正整数，即教主走一圈所需消耗的最小体力值。
+       <br/>
+       注意：C++选手建议使用cout输出long long类型整数。
+       <br/>
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Input
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">6 7
+
+4 2 6 2 5 6
+
+</pre>
+      </div>
+      <!-- nl2br not needed in pre -->
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Output
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">27</pre>
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div class="well">
+    <fieldset>
+     <legend>
+      <h4>
+       Data Constraint
+      </h4>
+     </legend>
+     <div class="content">
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div class="well">
+    <fieldset>
+     <legend>
+      <h4>
+       Hint
+      </h4>
+     </legend>
+     <div class="content">
+      【样例说明】
+      <br/>
+      从第3个落脚点开始以下降状态向前走，并在第4个落脚点时切换为上升状态。
+      <br/>
+      这样共耗费4 +(7)+3+1+2^2+2^2+4=27点体力。
+      <br/>
+      <br/>
+      【数据规模】
+      <br/>
+      对于10%的数据，N ≤ 10；
+      <br/>
+      对于30%的数据，N ≤ 100，a[i] ≤ 1000；
+      <br/>
+      对于50%的数据，N ≤ 1000，a[i] ≤ 100000；
+      <br/>
+      对于100%的数据，N ≤ 10000，a[i] ≤ 1000000，M ≤ 1000000000；
+      <br/>
+     </div>
+    </fieldset>
+   </div>
+  </div>
+ </div>
+</div>
+
+
+<div style="text-align:center"></div>
+
+</div>
+						
+						<div class="clearfix"></div>
+					</div>
+					
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="clearfix"></div>
+		
+		<!-- footer -->
+		<div class="row-fluid">
+			<div class="span12" id="copyleft">
+				<label id="server_time">Server time: Mon Aug 10 2019 11:45:14 GMT+0800 (中国标准时间)</label>				<a href="https://github.com/roastduck/fortuna-oj" target="_blank">Fortuna OJ 项目</a><br>
+				Author: <a href="https://github.com/moreD" target="_blank">moreD</a>, <a href="https://github.com/roastduck" target="_blank">RD</a>;
+				Collaborator: <a href="https://github.com/tarawa" target="_blank">twilight</a>, <a href="https://github.com/mchobbylong" target="_blank">McHobby</a><br>
+				Powered by CodeIgniter / Bootstrap<br>
+				Icons provided by <a href="http://glyphicons.com/">Glyphicons</a><br>
+							</div>
+		</div>
+		
+	</div>
+	
+	<div class="overlay" style="z-index: -1000; display: none; opacity: 0;"></div>
+
+
+
+</body></html>

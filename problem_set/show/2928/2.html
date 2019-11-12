@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)https://gmoj.net/senior/#contest -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+		
+		<title>Gold Medal Online Judge System</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Fortuna Online Judge System Default Framework">
+		<meta name="author" content="moreD">
+		
+
+		<link href="../../_files/bootstrap.min.css" rel="stylesheet">
+		<link href="../../_files/bootstrap-responsive.min.css" rel="stylesheet">
+		<link href="../../_files/style.css" rel="stylesheet">
+
+		<script> OJTitle = "Gold Medal Online Judge System"; </script>
+		
+		<style>.cke{visibility:hidden;}</style>	
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+			
+		<![endif]-->
+	</head>
+
+<body onload="init_framework()">
+	<div id="nav_toggle" class="well" style="padding: 2px; position:fixed; top: 35px; left:0px">
+		<i id="icon_nav_toggle" class="icon-arrow-left"></i>
+	</div>
+	<div id="scroll_tip" class="well affix-top" style="padding: 2px; position:fixed; right:0px; bottom:120px" onclick="javascript:scroll(0,0)">
+		<i class="icon-arrow-up"></i>
+	</div>
+	
+	<div class="container-fluid">
+		<div class="row-fluid">
+		
+			<!-- Header -->
+			<div class="span12">
+				<div class="well" style="padding: 7px; min-height:560px">
+					<div class="tabbable tabs-left">
+						<ul id="navigation" class="nav nav-tabs pull-left">
+							<li>
+								<label id="countdown"></label>
+							</li>
+							<li>
+								<div id="userinfo" style="display: block;">	<div class="mb_10">
+			<div style="text-align:center; padding:3px; margin: 0 auto" class="well">
+				<img src="../../images/avatar.gif">
+			</div>
+			<div style="text-align:center; margin: 3px auto 0">
+				<span class="label label-info">您已被强制离线</span>
+			</div>
+		</a>
+	</div>
+</div>
+								<div class="clearfix"></div>
+							<li class="nav_bar" id="nav_home">
+								<a href="../../index.html">主页</a>
+							</li>
+							<li class="nav_bar active" id="nav_contest">
+								<a href="../../problem_set.html">比赛</a>
+							</li>
+						</ul>
+						
+						<div id="page_content" class="tab-content" style="float: none; display: block;"><link href="_files/tablewithpin.css" rel="stylesheet">
+							<div class="navbar">
+	<div class="navbar-inner">
+		<ul class="nav">
+			<li><a href="../../problem_set.html"><img src="../../images/narrow-left.png" width="17" height="17"></a></li>
+			<li><a href="../home/2928">主页</a></li>
+            <li><a href="../../problem_set.html">题目</a></li>		</ul>
+	</div>
+</div>
+
+<div class="row-fluid">
+ <div id="header">
+  <div style="text-align:center">
+   <h2>
+    1352. 01路径
+    <sub>
+     (Standard IO)
+    </sub>
+   </h2>
+   <div>
+    Time Limits:
+    <span class="badge badge-info">
+     1000 ms
+    </span>
+    Memory Limits:
+    <span class="badge badge-info">
+     65536 KB
+    </span>
+   </div>
+  </div>
+ </div>
+ <div class="row-fluid" style="margin-top:7px">
+  <div id="mainbar">
+   <div class="problem">
+    <div class="span12 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Description
+       </h4>
+      </legend>
+      <div class="content">
+       小Z处在4个由传送门连接的奇怪的房间内。房间标记为A、B、C和D。每个房间里有两个按钮，标记为0和1。在A房间按0号按钮会被传送到C房间，反之在C号房间按0号按钮会被传送到A房间；在B房间按0号按钮会被传送到D房间，反之类似。类似的，在A房间按1号按钮会被传送到B房间，在C房间按1好按钮会被传送到D房间，反之一样。这个传送关系可以如下图来表示：
+       <br/>
+       <img border="0" p="" src="data:image/JPG;base64,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"/>
+       <br/>
+       按恰好n次按钮称之为n长度的01路径。显然，经过每个n长度的01路径后，小Z将会停留在某个房间。小Z想知道终点在R房间、字典序第K小的n长度01路径是哪一条。
+       <br/>
+       开始的时候，小Z总是在A房间。
+       <br/>
+      </div>
+     </fieldset>
+    </div>
+    <div class="clearfix">
+    </div>
+    <div>
+     <div class="span6 well">
+      <fieldset>
+       <legend>
+        <h4>
+         Input
+        </h4>
+       </legend>
+       <div class="content">
+        一行，包含一个字母R和两个数字n和K，之间用空格隔开。R是A、B、C、D中的一个。
+       </div>
+      </fieldset>
+     </div>
+     <div class="span6 well">
+      <fieldset>
+       <legend>
+        <h4>
+         Output
+        </h4>
+       </legend>
+       <div class="content">
+        一行，输出终点在R房间、字典序第K小的01路径。如果无解，输出“impossible”。
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="clearfix">
+    </div>
+    <div>
+     <div class="span6 well">
+      <fieldset>
+       <legend>
+        <h4>
+         Sample Input
+        </h4>
+       </legend>
+       <div class="content">
+        <pre style="border:none;font-size:110%">【输入1】
+
+B 3 2
+
+
+
+【输入2】
+
+D 1 1
+
+</pre>
+       </div>
+       <!-- nl2br not needed in pre -->
+      </fieldset>
+     </div>
+     <div class="span6 well">
+      <fieldset>
+       <legend>
+        <h4>
+         Sample Output
+        </h4>
+       </legend>
+       <div class="content">
+        <pre style="border:none;font-size:110%">【输出1】
+
+010
+
+
+
+【输出2】
+
+impossible</pre>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="clearfix">
+    </div>
+    <div class="well">
+     <fieldset>
+      <legend>
+       <h4>
+        Data Constraint
+       </h4>
+      </legend>
+      <div class="content">
+      </div>
+     </fieldset>
+    </div>
+    <div class="clearfix">
+    </div>
+    <div class="well">
+     <fieldset>
+      <legend>
+       <h4>
+        Hint
+       </h4>
+      </legend>
+      <div class="content">
+       【样例解释】
+       <br/>
+       第一个样例，所以可能的路径，按字典序排序，是：000，001，010，011，100，101，110，111。
+       <br/>
+       路径001 (A -&gt; C -&gt; A -&gt; B), 010 (A -&gt; C -&gt; D -&gt; B), 100 (A -&gt; B -&gt; D -&gt; B) 和 111 (A -&gt; B -&gt; A -&gt; B)是终点在B房间的路径。字典序第二个为010。
+       <br/>
+       第二个样例，从A点出发1步之内到达不了D房间。
+       <br/>
+       【数据说明】
+       <br/>
+       50%数据，1&lt;=n&lt;=50，1&lt;=k&lt;=10^18。
+       <br/>
+       100%数据，n&lt;=1000,1&lt;=k&lt;=10^400
+       <br/>
+      </div>
+     </fieldset>
+    </div>
+   </div>
+  </div>
+ </div>
+ <div style="text-align:center">
+ </div>
+</div>
+
+<div class="row-fluid" style="margin-top:7px">
+ <div id="mainbar">
+  <div class="problem">
+   <div class="span12 well">
+    <fieldset>
+     <legend>
+      <h4>
+       Description
+      </h4>
+     </legend>
+     <div class="content">
+      小Z处在4个由传送门连接的奇怪的房间内。房间标记为A、B、C和D。每个房间里有两个按钮，标记为0和1。在A房间按0号按钮会被传送到C房间，反之在C号房间按0号按钮会被传送到A房间；在B房间按0号按钮会被传送到D房间，反之类似。类似的，在A房间按1号按钮会被传送到B房间，在C房间按1好按钮会被传送到D房间，反之一样。这个传送关系可以如下图来表示：
+      <br/>
+      <img border="0" p="" src="data:image/JPG;base64,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"/>
+      <br/>
+      按恰好n次按钮称之为n长度的01路径。显然，经过每个n长度的01路径后，小Z将会停留在某个房间。小Z想知道终点在R房间、字典序第K小的n长度01路径是哪一条。
+      <br/>
+      开始的时候，小Z总是在A房间。
+      <br/>
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Input
+       </h4>
+      </legend>
+      <div class="content">
+       一行，包含一个字母R和两个数字n和K，之间用空格隔开。R是A、B、C、D中的一个。
+      </div>
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Output
+       </h4>
+      </legend>
+      <div class="content">
+       一行，输出终点在R房间、字典序第K小的01路径。如果无解，输出“impossible”。
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Input
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">【输入1】
+
+B 3 2
+
+
+
+【输入2】
+
+D 1 1
+
+</pre>
+      </div>
+      <!-- nl2br not needed in pre -->
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Output
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">【输出1】
+
+010
+
+
+
+【输出2】
+
+impossible</pre>
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div class="well">
+    <fieldset>
+     <legend>
+      <h4>
+       Data Constraint
+      </h4>
+     </legend>
+     <div class="content">
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div class="well">
+    <fieldset>
+     <legend>
+      <h4>
+       Hint
+      </h4>
+     </legend>
+     <div class="content">
+      【样例解释】
+      <br/>
+      第一个样例，所以可能的路径，按字典序排序，是：000，001，010，011，100，101，110，111。
+      <br/>
+      路径001 (A -&gt; C -&gt; A -&gt; B), 010 (A -&gt; C -&gt; D -&gt; B), 100 (A -&gt; B -&gt; D -&gt; B) 和 111 (A -&gt; B -&gt; A -&gt; B)是终点在B房间的路径。字典序第二个为010。
+      <br/>
+      第二个样例，从A点出发1步之内到达不了D房间。
+      <br/>
+      【数据说明】
+      <br/>
+      50%数据，1&lt;=n&lt;=50，1&lt;=k&lt;=10^18。
+      <br/>
+      100%数据，n&lt;=1000,1&lt;=k&lt;=10^400
+      <br/>
+     </div>
+    </fieldset>
+   </div>
+  </div>
+ </div>
+</div>
+
+<div class="row-fluid" style="margin-top:7px">
+ <div id="mainbar">
+  <div class="problem">
+   <div class="span12 well">
+    <fieldset>
+     <legend>
+      <h4>
+       Description
+      </h4>
+     </legend>
+     <div class="content">
+      小Z处在4个由传送门连接的奇怪的房间内。房间标记为A、B、C和D。每个房间里有两个按钮，标记为0和1。在A房间按0号按钮会被传送到C房间，反之在C号房间按0号按钮会被传送到A房间；在B房间按0号按钮会被传送到D房间，反之类似。类似的，在A房间按1号按钮会被传送到B房间，在C房间按1好按钮会被传送到D房间，反之一样。这个传送关系可以如下图来表示：
+      <br/>
+      <img border="0" p="" src="data:image/JPG;base64,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"/>
+      <br/>
+      按恰好n次按钮称之为n长度的01路径。显然，经过每个n长度的01路径后，小Z将会停留在某个房间。小Z想知道终点在R房间、字典序第K小的n长度01路径是哪一条。
+      <br/>
+      开始的时候，小Z总是在A房间。
+      <br/>
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Input
+       </h4>
+      </legend>
+      <div class="content">
+       一行，包含一个字母R和两个数字n和K，之间用空格隔开。R是A、B、C、D中的一个。
+      </div>
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Output
+       </h4>
+      </legend>
+      <div class="content">
+       一行，输出终点在R房间、字典序第K小的01路径。如果无解，输出“impossible”。
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Input
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">【输入1】
+
+B 3 2
+
+
+
+【输入2】
+
+D 1 1
+
+</pre>
+      </div>
+      <!-- nl2br not needed in pre -->
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Output
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">【输出1】
+
+010
+
+
+
+【输出2】
+
+impossible</pre>
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div class="well">
+    <fieldset>
+     <legend>
+      <h4>
+       Data Constraint
+      </h4>
+     </legend>
+     <div class="content">
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div class="well">
+    <fieldset>
+     <legend>
+      <h4>
+       Hint
+      </h4>
+     </legend>
+     <div class="content">
+      【样例解释】
+      <br/>
+      第一个样例，所以可能的路径，按字典序排序，是：000，001，010，011，100，101，110，111。
+      <br/>
+      路径001 (A -&gt; C -&gt; A -&gt; B), 010 (A -&gt; C -&gt; D -&gt; B), 100 (A -&gt; B -&gt; D -&gt; B) 和 111 (A -&gt; B -&gt; A -&gt; B)是终点在B房间的路径。字典序第二个为010。
+      <br/>
+      第二个样例，从A点出发1步之内到达不了D房间。
+      <br/>
+      【数据说明】
+      <br/>
+      50%数据，1&lt;=n&lt;=50，1&lt;=k&lt;=10^18。
+      <br/>
+      100%数据，n&lt;=1000,1&lt;=k&lt;=10^400
+      <br/>
+     </div>
+    </fieldset>
+   </div>
+  </div>
+ </div>
+</div>
+
+
+<div style="text-align:center"></div>
+
+</div>
+						
+						<div class="clearfix"></div>
+					</div>
+					
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="clearfix"></div>
+		
+		<!-- footer -->
+		<div class="row-fluid">
+			<div class="span12" id="copyleft">
+				<label id="server_time">Server time: Mon Aug 10 2019 11:45:14 GMT+0800 (中国标准时间)</label>				<a href="https://github.com/roastduck/fortuna-oj" target="_blank">Fortuna OJ 项目</a><br>
+				Author: <a href="https://github.com/moreD" target="_blank">moreD</a>, <a href="https://github.com/roastduck" target="_blank">RD</a>;
+				Collaborator: <a href="https://github.com/tarawa" target="_blank">twilight</a>, <a href="https://github.com/mchobbylong" target="_blank">McHobby</a><br>
+				Powered by CodeIgniter / Bootstrap<br>
+				Icons provided by <a href="http://glyphicons.com/">Glyphicons</a><br>
+							</div>
+		</div>
+		
+	</div>
+	
+	<div class="overlay" style="z-index: -1000; display: none; opacity: 0;"></div>
+
+
+
+</body></html>

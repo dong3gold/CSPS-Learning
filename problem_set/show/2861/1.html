@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)https://gmoj.net/senior/#contest -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+		
+		<title>Gold Medal Online Judge System</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Fortuna Online Judge System Default Framework">
+		<meta name="author" content="moreD">
+		
+
+		<link href="../../_files/bootstrap.min.css" rel="stylesheet">
+		<link href="../../_files/bootstrap-responsive.min.css" rel="stylesheet">
+		<link href="../../_files/style.css" rel="stylesheet">
+
+		<script> OJTitle = "Gold Medal Online Judge System"; </script>
+		
+		<style>.cke{visibility:hidden;}</style>	
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+			
+		<![endif]-->
+	</head>
+
+<body onload="init_framework()">
+	<div id="nav_toggle" class="well" style="padding: 2px; position:fixed; top: 35px; left:0px">
+		<i id="icon_nav_toggle" class="icon-arrow-left"></i>
+	</div>
+	<div id="scroll_tip" class="well affix-top" style="padding: 2px; position:fixed; right:0px; bottom:120px" onclick="javascript:scroll(0,0)">
+		<i class="icon-arrow-up"></i>
+	</div>
+	
+	<div class="container-fluid">
+		<div class="row-fluid">
+		
+			<!-- Header -->
+			<div class="span12">
+				<div class="well" style="padding: 7px; min-height:560px">
+					<div class="tabbable tabs-left">
+						<ul id="navigation" class="nav nav-tabs pull-left">
+							<li>
+								<label id="countdown"></label>
+							</li>
+							<li>
+								<div id="userinfo" style="display: block;">	<div class="mb_10">
+			<div style="text-align:center; padding:3px; margin: 0 auto" class="well">
+				<img src="../../images/avatar.gif">
+			</div>
+			<div style="text-align:center; margin: 3px auto 0">
+				<span class="label label-info">您已被强制离线</span>
+			</div>
+		</a>
+	</div>
+</div>
+								<div class="clearfix"></div>
+							<li class="nav_bar" id="nav_home">
+								<a href="../../index.html">主页</a>
+							</li>
+							<li class="nav_bar active" id="nav_contest">
+								<a href="../../problem_set.html">比赛</a>
+							</li>
+						</ul>
+						
+						<div id="page_content" class="tab-content" style="float: none; display: block;"><link href="_files/tablewithpin.css" rel="stylesheet">
+							<div class="navbar">
+	<div class="navbar-inner">
+		<ul class="nav">
+			<li><a href="../../problem_set.html"><img src="../../images/narrow-left.png" width="17" height="17"></a></li>
+			<li><a href="../home/2861">主页</a></li>
+            <li><a href="../../problem_set.html">题目</a></li>		</ul>
+	</div>
+</div>
+
+<div class="row-fluid">
+ <div id="header">
+  <div style="text-align:center">
+   <h2>
+    6313. Maja
+    <sub>
+     <br/>
+     (File IO):
+     <span style="color:red">
+      input:
+      <strong>
+       maja.in
+      </strong>
+      output:
+      <strong>
+       maja.out
+      </strong>
+     </span>
+    </sub>
+   </h2>
+   <div>
+    Time Limits:
+    <span class="badge badge-info">
+     2000 ms
+    </span>
+    Memory Limits:
+    <span class="badge badge-info">
+     262144 KB
+    </span>
+   </div>
+  </div>
+ </div>
+</div>
+
+<div class="row-fluid" style="margin-top:7px">
+ <div id="mainbar">
+  <div class="problem">
+   <div class="span12 well">
+    <fieldset>
+     <legend>
+      <h4>
+       Description
+      </h4>
+     </legend>
+     <div class="content">
+      蜜蜂 Maja 到了一片草地，草地可以被描述成 N 行 M 列的网格图，在第 i 行第 j 列的位置上有 C_{i,j} 朵未授粉的花。
+      <br/>
+      Maja 会从第 A 行第 B 列出发，每次只能移动到与当前位置四相邻的格子上，且不能移动到草地以外。每到达一个格子，她会把此处所有未授粉的花都授粉。
+      <br/>
+      然而，当 Maja 离开一个格子，此处又会长出 C_{i,j} 朵未授粉的花。
+      <br/>
+      Maja 想知道，如果她从第 A 行第 B 列出发，选择一条长度恰好为 K 的路径，最后又回到第 A 行第 B 列，最多能为多少朵花授粉。
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Input
+       </h4>
+      </legend>
+      <div class="content">
+       第一行 5 个正整数 N,M,A,B,K，如题面所述（K 一定是偶数）。
+       <br/>
+       接下来 N 行每行 M 个非负整数，第 i 行第 j 个表示题面所述的 C_{i,j}。
+       <br/>
+       数据保证 C_{A,B}=0。
+      </div>
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Output
+       </h4>
+      </legend>
+      <div class="content">
+       一个整数，表示授粉数的最大值。
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Input
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">Sample 1:
+2 2 1 1 2
+0 1
+2 10
+
+Sample 2:
+2 2 1 1 4
+0 5
+5 10
+
+Sample 3:
+3 3 2 2 6
+5 1 0
+1 0 3
+1 3 3
+</pre>
+      </div>
+      <!-- nl2br not needed in pre -->
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Output
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">Sample 1:
+2
+
+Sample 2:
+20
+
+Sample 3:
+15
+</pre>
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div class="well">
+    <fieldset>
+     <legend>
+      <h4>
+       Data Constraint
+      </h4>
+     </legend>
+     <div class="content">
+      <img alt=" " src="data:image/png;base64,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"/>
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+  </div>
+ </div>
+</div>
+
+
+<div style="text-align:center"></div>
+
+</div>
+						
+						<div class="clearfix"></div>
+					</div>
+					
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="clearfix"></div>
+		
+		<!-- footer -->
+		<div class="row-fluid">
+			<div class="span12" id="copyleft">
+				<label id="server_time">Server time: Mon Aug 10 2019 11:45:14 GMT+0800 (中国标准时间)</label>				<a href="https://github.com/roastduck/fortuna-oj" target="_blank">Fortuna OJ 项目</a><br>
+				Author: <a href="https://github.com/moreD" target="_blank">moreD</a>, <a href="https://github.com/roastduck" target="_blank">RD</a>;
+				Collaborator: <a href="https://github.com/tarawa" target="_blank">twilight</a>, <a href="https://github.com/mchobbylong" target="_blank">McHobby</a><br>
+				Powered by CodeIgniter / Bootstrap<br>
+				Icons provided by <a href="http://glyphicons.com/">Glyphicons</a><br>
+							</div>
+		</div>
+		
+	</div>
+	
+	<div class="overlay" style="z-index: -1000; display: none; opacity: 0;"></div>
+
+
+
+</body></html>

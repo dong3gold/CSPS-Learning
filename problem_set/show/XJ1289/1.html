@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)https://gmoj.net/senior/#contest -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+		
+		<title>Gold Medal Online Judge System</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Fortuna Online Judge System Default Framework">
+		<meta name="author" content="moreD">
+		
+
+		<link href="../../_files/bootstrap.min.css" rel="stylesheet">
+		<link href="../../_files/bootstrap-responsive.min.css" rel="stylesheet">
+		<link href="../../_files/style.css" rel="stylesheet">
+
+		<script> OJTitle = "Gold Medal Online Judge System"; </script>
+		
+		<style>.cke{visibility:hidden;}</style>	
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+			
+		<![endif]-->
+	</head>
+
+<body onload="init_framework()">
+	<div id="nav_toggle" class="well" style="padding: 2px; position:fixed; top: 35px; left:0px">
+		<i id="icon_nav_toggle" class="icon-arrow-left"></i>
+	</div>
+	<div id="scroll_tip" class="well affix-top" style="padding: 2px; position:fixed; right:0px; bottom:120px" onclick="javascript:scroll(0,0)">
+		<i class="icon-arrow-up"></i>
+	</div>
+	
+	<div class="container-fluid">
+		<div class="row-fluid">
+		
+			<!-- Header -->
+			<div class="span12">
+				<div class="well" style="padding: 7px; min-height:560px">
+					<div class="tabbable tabs-left">
+						<ul id="navigation" class="nav nav-tabs pull-left">
+							<li>
+								<label id="countdown"></label>
+							</li>
+							<li>
+								<div id="userinfo" style="display: block;">	<div class="mb_10">
+			<div style="text-align:center; padding:3px; margin: 0 auto" class="well">
+				<img src="../../images/avatar.gif">
+			</div>
+			<div style="text-align:center; margin: 3px auto 0">
+				<span class="label label-info">您已被强制离线</span>
+			</div>
+		</a>
+	</div>
+</div>
+								<div class="clearfix"></div>
+							</li>
+							<li class="nav_bar active" id="nav_contest">
+								<a href="../../problem_set.html">比赛									<span class="badge badge-important" id="running_contest_count" style="padding: 1px 4px"></span>								</a>
+							</li>
+						</ul>
+						
+						<div id="page_content" class="tab-content" style="float: none; display: block;"><link href="_files/tablewithpin.css" rel="stylesheet">
+							<div class="navbar">
+	<div class="navbar-inner">
+		<ul class="nav">
+			<li><a href="../../problem_set.html"><img src="../../images/narrow-left.png" width="17" height="17"></a></li>
+			<li><a href="2912.html">Home</a></li>
+            <li><a href="../../problem_set.html">Problem</a></li>		</ul>
+	</div>
+</div>
+<div class="row-fluid">
+	<div id="header"><div style="text-align:center"><h2>路径数 <sub>(Standard IO)</sub></h2><div>Time Limits: <span class="badge badge-info">1000 ms</span> &nbsp;Memory Limits: <span class="badge badge-info">262144 KB</span> </div></div></div>
+</div>
+
+
+<div class="row-fluid" style="margin-top:7px">
+	<div id="mainbar">
+		<div class="problem">
+			<div class="span12 well"><fieldset>
+				<legend><h4>Description</h4></legend>
+				<div class="content">Euphemia到一个N*N的药草田里采药，她从左上角的格子田（第一行，第一列）出发，要到达右下角（第N行，第N列）的格子田，每次她可以走到与当前格子有边相邻的格子去，但她不会走已经走过的格子，而且出于对美的要求，她走过的路径是关于 左下-右上 对角线对称的。由于地势不同，在每个格子田采药都会有一个疲劳度Tij，Euphemia想知道：有多少条合法路径，可以使得她采药的疲劳度最小。</div>
+			</fieldset></div>
+			<div class="clearfix"></div>
+			
+			<div>
+				<div class="span6 well"><fieldset>
+					<legend><h4>Input</h4></legend>
+					<div class="content">多组数据。<br>
+每组数据第一行一个整数N，接下来N行，每行N个非零数字（1,2,3...9中一个），表示格子田的疲劳度。<br>
+当N=0，输入结束。</div>
+				</fieldset></div>
+			
+				<div class="span6 well"><fieldset>
+					<legend><h4>Output</h4></legend>
+					<div class="content">对于每组数据，输出一个整数表示答案，答案%1000000009。</div>
+				</fieldset></div>
+			</div>
+			<div class="clearfix"></div>
+			
+			<div>
+				<div class="span6 well"><fieldset>
+					<legend><h4>Sample Input</h4></legend>
+					<div class="content"><pre style='border:none;font-size:110%'>2<br />1&nbsp;1<br />1&nbsp;1<br />3<br />1&nbsp;1&nbsp;1<br />1&nbsp;1&nbsp;1<br />2&nbsp;1&nbsp;1<br />0</pre></div> <!-- nl2br not needed in pre -->
+				</fieldset></div>
+			
+				<div class="span6 well"><fieldset>
+					<legend><h4>Sample Output</h4></legend>
+					<div class="content"><pre style='border:none;font-size:110%'>2<br />3</pre></div>
+				</fieldset></div>
+			</div>
+			<div class="clearfix"></div>
+		
+			<div class="well"><fieldset>
+				<legend><h4>Data Constraint</h4></legend>
+				<div class="content">对于20%的数据满足N&lt;=5。<br>对于另外20%的数据满足N&lt;=40。<br>对于100%的数据满足N&lt;=100,不超过50组数据。</div>
+			</fieldset></div>
+			<div class="clearfix"></div>
+			
+							<div class="well"><fieldset>
+					<legend><h4>Hint</h4></legend>
+					<div class="content">remove !!!</div>
+				</fieldset></div>
+					</div>
+	</div>
+</div>
+
+<div style="text-align:center"></div>
+
+</div>
+						
+						<div class="clearfix"></div>
+					</div>
+					
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="clearfix"></div>
+		
+		<!-- footer -->
+		<div class="row-fluid">
+			<div class="span12" id="copyleft">
+				<label id="server_time">Server time: Mon Aug 10 2019 11:45:14 GMT+0800 (中国标准时间)</label>				<a href="https://github.com/roastduck/fortuna-oj" target="_blank">Fortuna OJ 项目</a><br>
+				Author: <a href="https://github.com/moreD" target="_blank">moreD</a>, <a href="https://github.com/roastduck" target="_blank">RD</a>;
+				Collaborator: <a href="https://github.com/tarawa" target="_blank">twilight</a>, <a href="https://github.com/mchobbylong" target="_blank">McHobby</a><br>
+				Powered by CodeIgniter / Bootstrap<br>
+				Icons provided by <a href="http://glyphicons.com/">Glyphicons</a><br>
+							</div>
+		</div>
+		
+	</div>
+	
+	<div class="overlay" style="z-index: -1000; display: none; opacity: 0;"></div>
+
+
+
+</body></html>

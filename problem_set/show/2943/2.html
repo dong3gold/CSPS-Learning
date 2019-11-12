@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)https://gmoj.net/senior/#contest -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+		
+		<title>Gold Medal Online Judge System</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Fortuna Online Judge System Default Framework">
+		<meta name="author" content="moreD">
+		
+
+		<link href="../../_files/bootstrap.min.css" rel="stylesheet">
+		<link href="../../_files/bootstrap-responsive.min.css" rel="stylesheet">
+		<link href="../../_files/style.css" rel="stylesheet">
+
+		<script> OJTitle = "Gold Medal Online Judge System"; </script>
+		
+		<style>.cke{visibility:hidden;}</style>	
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+			
+		<![endif]-->
+	</head>
+
+<body onload="init_framework()">
+	<div id="nav_toggle" class="well" style="padding: 2px; position:fixed; top: 35px; left:0px">
+		<i id="icon_nav_toggle" class="icon-arrow-left"></i>
+	</div>
+	<div id="scroll_tip" class="well affix-top" style="padding: 2px; position:fixed; right:0px; bottom:120px" onclick="javascript:scroll(0,0)">
+		<i class="icon-arrow-up"></i>
+	</div>
+	
+	<div class="container-fluid">
+		<div class="row-fluid">
+		
+			<!-- Header -->
+			<div class="span12">
+				<div class="well" style="padding: 7px; min-height:560px">
+					<div class="tabbable tabs-left">
+						<ul id="navigation" class="nav nav-tabs pull-left">
+							<li>
+								<label id="countdown"></label>
+							</li>
+							<li>
+								<div id="userinfo" style="display: block;">	<div class="mb_10">
+			<div style="text-align:center; padding:3px; margin: 0 auto" class="well">
+				<img src="../../images/avatar.gif">
+			</div>
+			<div style="text-align:center; margin: 3px auto 0">
+				<span class="label label-info">您已被强制离线</span>
+			</div>
+		</a>
+	</div>
+</div>
+								<div class="clearfix"></div>
+							<li class="nav_bar" id="nav_home">
+								<a href="../../index.html">主页</a>
+							</li>
+							<li class="nav_bar active" id="nav_contest">
+								<a href="../../problem_set.html">比赛</a>
+							</li>
+						</ul>
+						
+						<div id="page_content" class="tab-content" style="float: none; display: block;"><link href="_files/tablewithpin.css" rel="stylesheet">
+							<div class="navbar">
+	<div class="navbar-inner">
+		<ul class="nav">
+			<li><a href="../../problem_set.html"><img src="../../images/narrow-left.png" width="17" height="17"></a></li>
+			<li><a href="../home/2943">主页</a></li>
+            <li><a href="../../problem_set.html">题目</a></li>		</ul>
+	</div>
+</div>
+
+<div class="row-fluid">
+ <div id="header">
+  <div style="text-align:center">
+   <h2>
+    6420. 【NOIP2019模拟2019.11.10】迷雾华光
+    <sub>
+     <br/>
+     (File IO):
+     <span style="color:red">
+      input:
+      <strong>
+       mode.in
+      </strong>
+      output:
+      <strong>
+       mode.out
+      </strong>
+     </span>
+    </sub>
+   </h2>
+   <div>
+    Time Limits:
+    <span class="badge badge-info">
+     10000 ms
+    </span>
+    Memory Limits:
+    <span class="badge badge-info">
+     524288 KB
+    </span>
+   </div>
+  </div>
+ </div>
+ <div class="row-fluid" style="margin-top:7px">
+  <div id="mainbar">
+   <div class="problem">
+    <div class="span12 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Description
+       </h4>
+      </legend>
+      <div class="content">
+       众所周知，在一场考试中，三道题是相对独立的，这是因为题目考察的知识点往往不同，不同的知识点往往又具有一定独立性。因此解决一道题目与掌握这道题目涉及的算法知识密切相关。
+       <br/>
+       小L想知道他最应该学习什么，小L的请求用我们所学的OI模型来描述大概是这样的：
+       <br/>
+       1. 将比赛看作一棵n个点的树形结构，每个点代表一场比赛且具有三个数
+       <br/>
+       (ai,1,ai,2,ai,3)，这对应这场比赛中三道题涉及的知识点；
+       <br/>
+       2. 小L的竞赛历程可以视作树上的一条路径 (u,v)，你需要求出小L最应该学习什么知识，即这条路径上出现次数最多的数是什么（一个点上如果有相同的数算作出现多次）；
+       <br/>
+       3. 由于世界线的变动，小 L 的竞赛历程可能有微小的变化，因此有多次询问，这里用q表示询问次数。
+       <br/>
+       请你完成小L的请求。
+      </div>
+     </fieldset>
+    </div>
+    <div class="clearfix">
+    </div>
+    <div>
+     <div class="span6 well">
+      <fieldset>
+       <legend>
+        <h4>
+         Input
+        </h4>
+       </legend>
+       <div class="content">
+        从文件 mode.in 中读入数据。
+        <br/>
+        输入第一行包含一个整数 Type 表示强制在线参数，它的作用在下文中会给出解释。
+        <br/>
+        接下来一行包含一个正整数 n ，意义如题目描述中所示。
+        <br/>
+        接下来 n 行，每行三个整数分别为ai,1,ai,2,ai,3。
+        <br/>
+        接下来n-1行，每行两个整数x,y，描述比赛之间的关系，也就是树的一条边，对于所有数据，1号点为树的根。
+        <br/>
+        再接下来的一行是一个整数q，意义如题目描述中所示。
+        <br/>
+        接下来q行，每行两个整数u,v，表示本次询问路径的两个端点。记 xorsum 为前前面询问答案的异或和，这里规定，在第一次询问之前，xorsum=0。对所有
+        <br/>
+        Type=1的数据，你需要将u,v异或上xorsum来得到真正的u,v。
+       </div>
+      </fieldset>
+     </div>
+     <div class="span6 well">
+      <fieldset>
+       <legend>
+        <h4>
+         Output
+        </h4>
+       </legend>
+       <div class="content">
+        输出到文件mode.out中。
+        <br/>
+        输出q行，每行两个数，分别表示当前询问的路径上出现最多的数的出现次数和出现次数最多的数。当有多个数出现次数同为最多时，你需要输出较小的那个。另外需要注意的一点是，对于每次询问，你应当将 xorsum 异或上你输出的两个数而不是其中某一个。
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="clearfix">
+    </div>
+    <div>
+     <div class="span6 well">
+      <fieldset>
+       <legend>
+        <h4>
+         Sample Input
+        </h4>
+       </legend>
+       <div class="content">
+        <pre style="border:none;font-size:110%">0
+6
+2 1 2
+4 1 4
+2 4 3
+1 4 1
+4 4 1
+4 1 4
+1 2
+2 3
+3 4
+2 5
+5 6
+2
+3 4
+1 4</pre>
+       </div>
+       <!-- nl2br not needed in pre -->
+      </fieldset>
+     </div>
+     <div class="span6 well">
+      <fieldset>
+       <legend>
+        <h4>
+         Sample Output
+        </h4>
+       </legend>
+       <div class="content">
+        <pre style="border:none;font-size:110%">2 1
+4 1</pre>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="clearfix">
+    </div>
+    <div class="well">
+     <fieldset>
+      <legend>
+       <h4>
+        Data Constraint
+       </h4>
+      </legend>
+      <div class="content">
+       对于前 10% 的数据，保证 n, q ≤ 10^4 。
+       <br/>
+       对于前 20% 的数据，保证 n, q ≤ 23333 。
+       <br/>
+       对于前 50% 的数据，保证 Type = 0 ，数据较为随机且具有一定梯度。
+       <br/>
+       对于 100% 的数据，保证 1 ≤ n ≤ 8×10^4, 1 ≤ q ≤ 10^5, Type∈ {0, 1},1 ≤ ai,1, ai,2, ai,3 ≤ n
+       <br/>
+       本题采用捆绑测试，前 10 个子任务均为 5 分，最后一个子任务为 50 分。
+      </div>
+     </fieldset>
+    </div>
+    <div class="clearfix">
+    </div>
+   </div>
+  </div>
+ </div>
+ <div style="text-align:center">
+ </div>
+</div>
+
+<div class="row-fluid" style="margin-top:7px">
+ <div id="mainbar">
+  <div class="problem">
+   <div class="span12 well">
+    <fieldset>
+     <legend>
+      <h4>
+       Description
+      </h4>
+     </legend>
+     <div class="content">
+      众所周知，在一场考试中，三道题是相对独立的，这是因为题目考察的知识点往往不同，不同的知识点往往又具有一定独立性。因此解决一道题目与掌握这道题目涉及的算法知识密切相关。
+      <br/>
+      小L想知道他最应该学习什么，小L的请求用我们所学的OI模型来描述大概是这样的：
+      <br/>
+      1. 将比赛看作一棵n个点的树形结构，每个点代表一场比赛且具有三个数
+      <br/>
+      (ai,1,ai,2,ai,3)，这对应这场比赛中三道题涉及的知识点；
+      <br/>
+      2. 小L的竞赛历程可以视作树上的一条路径 (u,v)，你需要求出小L最应该学习什么知识，即这条路径上出现次数最多的数是什么（一个点上如果有相同的数算作出现多次）；
+      <br/>
+      3. 由于世界线的变动，小 L 的竞赛历程可能有微小的变化，因此有多次询问，这里用q表示询问次数。
+      <br/>
+      请你完成小L的请求。
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Input
+       </h4>
+      </legend>
+      <div class="content">
+       从文件 mode.in 中读入数据。
+       <br/>
+       输入第一行包含一个整数 Type 表示强制在线参数，它的作用在下文中会给出解释。
+       <br/>
+       接下来一行包含一个正整数 n ，意义如题目描述中所示。
+       <br/>
+       接下来 n 行，每行三个整数分别为ai,1,ai,2,ai,3。
+       <br/>
+       接下来n-1行，每行两个整数x,y，描述比赛之间的关系，也就是树的一条边，对于所有数据，1号点为树的根。
+       <br/>
+       再接下来的一行是一个整数q，意义如题目描述中所示。
+       <br/>
+       接下来q行，每行两个整数u,v，表示本次询问路径的两个端点。记 xorsum 为前前面询问答案的异或和，这里规定，在第一次询问之前，xorsum=0。对所有
+       <br/>
+       Type=1的数据，你需要将u,v异或上xorsum来得到真正的u,v。
+      </div>
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Output
+       </h4>
+      </legend>
+      <div class="content">
+       输出到文件mode.out中。
+       <br/>
+       输出q行，每行两个数，分别表示当前询问的路径上出现最多的数的出现次数和出现次数最多的数。当有多个数出现次数同为最多时，你需要输出较小的那个。另外需要注意的一点是，对于每次询问，你应当将 xorsum 异或上你输出的两个数而不是其中某一个。
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Input
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">0
+6
+2 1 2
+4 1 4
+2 4 3
+1 4 1
+4 4 1
+4 1 4
+1 2
+2 3
+3 4
+2 5
+5 6
+2
+3 4
+1 4</pre>
+      </div>
+      <!-- nl2br not needed in pre -->
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Output
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">2 1
+4 1</pre>
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div class="well">
+    <fieldset>
+     <legend>
+      <h4>
+       Data Constraint
+      </h4>
+     </legend>
+     <div class="content">
+      对于前 10% 的数据，保证 n, q ≤ 10^4 。
+      <br/>
+      对于前 20% 的数据，保证 n, q ≤ 23333 。
+      <br/>
+      对于前 50% 的数据，保证 Type = 0 ，数据较为随机且具有一定梯度。
+      <br/>
+      对于 100% 的数据，保证 1 ≤ n ≤ 8×10^4, 1 ≤ q ≤ 10^5, Type∈ {0, 1},1 ≤ ai,1, ai,2, ai,3 ≤ n
+      <br/>
+      本题采用捆绑测试，前 10 个子任务均为 5 分，最后一个子任务为 50 分。
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+  </div>
+ </div>
+</div>
+
+<div class="row-fluid" style="margin-top:7px">
+ <div id="mainbar">
+  <div class="problem">
+   <div class="span12 well">
+    <fieldset>
+     <legend>
+      <h4>
+       Description
+      </h4>
+     </legend>
+     <div class="content">
+      众所周知，在一场考试中，三道题是相对独立的，这是因为题目考察的知识点往往不同，不同的知识点往往又具有一定独立性。因此解决一道题目与掌握这道题目涉及的算法知识密切相关。
+      <br/>
+      小L想知道他最应该学习什么，小L的请求用我们所学的OI模型来描述大概是这样的：
+      <br/>
+      1. 将比赛看作一棵n个点的树形结构，每个点代表一场比赛且具有三个数
+      <br/>
+      (ai,1,ai,2,ai,3)，这对应这场比赛中三道题涉及的知识点；
+      <br/>
+      2. 小L的竞赛历程可以视作树上的一条路径 (u,v)，你需要求出小L最应该学习什么知识，即这条路径上出现次数最多的数是什么（一个点上如果有相同的数算作出现多次）；
+      <br/>
+      3. 由于世界线的变动，小 L 的竞赛历程可能有微小的变化，因此有多次询问，这里用q表示询问次数。
+      <br/>
+      请你完成小L的请求。
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Input
+       </h4>
+      </legend>
+      <div class="content">
+       从文件 mode.in 中读入数据。
+       <br/>
+       输入第一行包含一个整数 Type 表示强制在线参数，它的作用在下文中会给出解释。
+       <br/>
+       接下来一行包含一个正整数 n ，意义如题目描述中所示。
+       <br/>
+       接下来 n 行，每行三个整数分别为ai,1,ai,2,ai,3。
+       <br/>
+       接下来n-1行，每行两个整数x,y，描述比赛之间的关系，也就是树的一条边，对于所有数据，1号点为树的根。
+       <br/>
+       再接下来的一行是一个整数q，意义如题目描述中所示。
+       <br/>
+       接下来q行，每行两个整数u,v，表示本次询问路径的两个端点。记 xorsum 为前前面询问答案的异或和，这里规定，在第一次询问之前，xorsum=0。对所有
+       <br/>
+       Type=1的数据，你需要将u,v异或上xorsum来得到真正的u,v。
+      </div>
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Output
+       </h4>
+      </legend>
+      <div class="content">
+       输出到文件mode.out中。
+       <br/>
+       输出q行，每行两个数，分别表示当前询问的路径上出现最多的数的出现次数和出现次数最多的数。当有多个数出现次数同为最多时，你需要输出较小的那个。另外需要注意的一点是，对于每次询问，你应当将 xorsum 异或上你输出的两个数而不是其中某一个。
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Input
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">0
+6
+2 1 2
+4 1 4
+2 4 3
+1 4 1
+4 4 1
+4 1 4
+1 2
+2 3
+3 4
+2 5
+5 6
+2
+3 4
+1 4</pre>
+      </div>
+      <!-- nl2br not needed in pre -->
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Output
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">2 1
+4 1</pre>
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div class="well">
+    <fieldset>
+     <legend>
+      <h4>
+       Data Constraint
+      </h4>
+     </legend>
+     <div class="content">
+      对于前 10% 的数据，保证 n, q ≤ 10^4 。
+      <br/>
+      对于前 20% 的数据，保证 n, q ≤ 23333 。
+      <br/>
+      对于前 50% 的数据，保证 Type = 0 ，数据较为随机且具有一定梯度。
+      <br/>
+      对于 100% 的数据，保证 1 ≤ n ≤ 8×10^4, 1 ≤ q ≤ 10^5, Type∈ {0, 1},1 ≤ ai,1, ai,2, ai,3 ≤ n
+      <br/>
+      本题采用捆绑测试，前 10 个子任务均为 5 分，最后一个子任务为 50 分。
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+  </div>
+ </div>
+</div>
+
+
+<div style="text-align:center"></div>
+
+</div>
+						
+						<div class="clearfix"></div>
+					</div>
+					
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="clearfix"></div>
+		
+		<!-- footer -->
+		<div class="row-fluid">
+			<div class="span12" id="copyleft">
+				<label id="server_time">Server time: Mon Aug 10 2019 11:45:14 GMT+0800 (中国标准时间)</label>				<a href="https://github.com/roastduck/fortuna-oj" target="_blank">Fortuna OJ 项目</a><br>
+				Author: <a href="https://github.com/moreD" target="_blank">moreD</a>, <a href="https://github.com/roastduck" target="_blank">RD</a>;
+				Collaborator: <a href="https://github.com/tarawa" target="_blank">twilight</a>, <a href="https://github.com/mchobbylong" target="_blank">McHobby</a><br>
+				Powered by CodeIgniter / Bootstrap<br>
+				Icons provided by <a href="http://glyphicons.com/">Glyphicons</a><br>
+							</div>
+		</div>
+		
+	</div>
+	
+	<div class="overlay" style="z-index: -1000; display: none; opacity: 0;"></div>
+
+
+
+</body></html>

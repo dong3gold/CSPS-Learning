@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)https://gmoj.net/senior/#contest -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+		
+		<title>Gold Medal Online Judge System</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Fortuna Online Judge System Default Framework">
+		<meta name="author" content="moreD">
+		
+
+		<link href="../../_files/bootstrap.min.css" rel="stylesheet">
+		<link href="../../_files/bootstrap-responsive.min.css" rel="stylesheet">
+		<link href="../../_files/style.css" rel="stylesheet">
+
+		<script> OJTitle = "Gold Medal Online Judge System"; </script>
+		
+		<style>.cke{visibility:hidden;}</style>	
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+			
+		<![endif]-->
+	</head>
+
+<body onload="init_framework()">
+	<div id="nav_toggle" class="well" style="padding: 2px; position:fixed; top: 35px; left:0px">
+		<i id="icon_nav_toggle" class="icon-arrow-left"></i>
+	</div>
+	<div id="scroll_tip" class="well affix-top" style="padding: 2px; position:fixed; right:0px; bottom:120px" onclick="javascript:scroll(0,0)">
+		<i class="icon-arrow-up"></i>
+	</div>
+	
+	<div class="container-fluid">
+		<div class="row-fluid">
+		
+			<!-- Header -->
+			<div class="span12">
+				<div class="well" style="padding: 7px; min-height:560px">
+					<div class="tabbable tabs-left">
+						<ul id="navigation" class="nav nav-tabs pull-left">
+							<li>
+								<label id="countdown"></label>
+							</li>
+							<li>
+								<div id="userinfo" style="display: block;">	<div class="mb_10">
+			<div style="text-align:center; padding:3px; margin: 0 auto" class="well">
+				<img src="../../images/avatar.gif">
+			</div>
+			<div style="text-align:center; margin: 3px auto 0">
+				<span class="label label-info">您已被强制离线</span>
+			</div>
+		</a>
+	</div>
+</div>
+								<div class="clearfix"></div>
+							<li class="nav_bar" id="nav_home">
+								<a href="../../index.html">主页</a>
+							</li>
+							<li class="nav_bar active" id="nav_contest">
+								<a href="../../problem_set.html">比赛</a>
+							</li>
+						</ul>
+						
+						<div id="page_content" class="tab-content" style="float: none; display: block;"><link href="_files/tablewithpin.css" rel="stylesheet">
+							<div class="navbar">
+	<div class="navbar-inner">
+		<ul class="nav">
+			<li><a href="../../problem_set.html"><img src="../../images/narrow-left.png" width="17" height="17"></a></li>
+			<li><a href="../home/2912">主页</a></li>
+            <li><a href="../../problem_set.html">题目</a></li>		</ul>
+	</div>
+</div>
+
+<div class="row-fluid">
+ <div id="header">
+  <div style="text-align:center">
+   <h2>
+    3814. 天黑黑
+    <sub>
+     (Standard IO)
+    </sub>
+   </h2>
+   <div>
+    Time Limits:
+    <span class="badge badge-info">
+     1000 ms
+    </span>
+    Memory Limits:
+    <span class="badge badge-info">
+     262144 KB
+    </span>
+   </div>
+  </div>
+ </div>
+</div>
+
+<div class="row-fluid" style="margin-top:7px">
+ <div id="mainbar">
+  <div class="problem">
+   <div class="span12 well">
+    <fieldset>
+     <legend>
+      <h4>
+       Description
+      </h4>
+     </legend>
+     <div class="content">
+      我走在每天必须面对的分岔路/我怀念过去单纯美好的小幸福/爱总是让人哭/让人觉得不满足/天空很大却看不清楚/好孤独/天黑的时候/我又想起那首歌/突然期待下起安静的雨/原来外婆的道理早就唱给我听/下起雨/也要勇敢前行/我相信/一切都会平息/我现在好想回家去/天黑黑/欲落雨/天黑黑/黑黑
+      <br/>
+      当整个世界陷入黑暗的时候，身为光明之神的Zyh想要用自己的若干个能量源和若干个集流器将这些能量源并成一个最大的能量源，这样他就可以造出最大的灯来照亮整个世界。
+      <br/>
+      具体地来说每个能量源可以直接给出Ei的能量。而每个集流器是由两个接受端口和一个输出端口组成的。集流器有两种：A类和B类。A类是叠加集流器，可以将两个接收端口的能量叠加并输出。B类是取代集流器，可以将两个接受端口的能量较大那个输出。
+      <br/>
+      现在有n-1个集流器，n个能量源。Zyh给出了集流器的连接方式，他想知道怎样放置能量源，能够使最后的输出最大化。
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Input
+       </h4>
+      </legend>
+      <div class="content">
+       第一行是一个字符串，表示连接的方式。给出的形式是这样的：X，表示一个单独的输出能量源的放置处；AS1S2，其中S1和S2表示两个输出能量，A表示使用叠加集流器将能量并成一个，然后这本身也成为一个新的输出能源；BS1S2也是同理，只不过是使用取代集流器。并且保证A和B的个数为n-1个。X的个数为n个。
+       <br/>
+       第二行是n个正整数，表示这几个能量源。
+      </div>
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Output
+       </h4>
+      </legend>
+      <div class="content">
+       一个数，表示最大的输出能源。
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Input
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">输入1：<br/>BXBXX<br/>8 2 3<br/>输入2：<br/>AXBXX<br/>8 2 3</pre>
+      </div>
+      <!-- nl2br not needed in pre -->
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Output
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">输出1：<br/>8<br/>输入2：<br/>11</pre>
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div class="well">
+    <fieldset>
+     <legend>
+      <h4>
+       Data Constraint
+      </h4>
+     </legend>
+     <div class="content">
+      对于20%的数据 n&lt;10
+      <br/>
+      对于60%的数据 n&lt;=3000
+      <br/>
+      对于100%的数据 n&lt;=200000 Ei&lt;=10000
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div class="well">
+    <fieldset>
+     <legend>
+      <h4>
+       Hint
+      </h4>
+     </legend>
+     <div class="content">
+      <img alt="" src="data:image/png;base64,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" style="height:71px; width:260px"/>
+     </div>
+    </fieldset>
+   </div>
+  </div>
+ </div>
+</div>
+
+
+<div style="text-align:center"></div>
+
+</div>
+						
+						<div class="clearfix"></div>
+					</div>
+					
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="clearfix"></div>
+		
+		<!-- footer -->
+		<div class="row-fluid">
+			<div class="span12" id="copyleft">
+				<label id="server_time">Server time: Mon Aug 10 2019 11:45:14 GMT+0800 (中国标准时间)</label>				<a href="https://github.com/roastduck/fortuna-oj" target="_blank">Fortuna OJ 项目</a><br>
+				Author: <a href="https://github.com/moreD" target="_blank">moreD</a>, <a href="https://github.com/roastduck" target="_blank">RD</a>;
+				Collaborator: <a href="https://github.com/tarawa" target="_blank">twilight</a>, <a href="https://github.com/mchobbylong" target="_blank">McHobby</a><br>
+				Powered by CodeIgniter / Bootstrap<br>
+				Icons provided by <a href="http://glyphicons.com/">Glyphicons</a><br>
+							</div>
+		</div>
+		
+	</div>
+	
+	<div class="overlay" style="z-index: -1000; display: none; opacity: 0;"></div>
+
+
+
+</body></html>

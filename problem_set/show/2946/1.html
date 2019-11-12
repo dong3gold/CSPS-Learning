@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)https://gmoj.net/senior/#contest -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+		
+		<title>Gold Medal Online Judge System</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Fortuna Online Judge System Default Framework">
+		<meta name="author" content="moreD">
+		
+
+		<link href="../../_files/bootstrap.min.css" rel="stylesheet">
+		<link href="../../_files/bootstrap-responsive.min.css" rel="stylesheet">
+		<link href="../../_files/style.css" rel="stylesheet">
+
+		<script> OJTitle = "Gold Medal Online Judge System"; </script>
+		
+		<style>.cke{visibility:hidden;}</style>	
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+			
+		<![endif]-->
+	</head>
+
+<body onload="init_framework()">
+	<div id="nav_toggle" class="well" style="padding: 2px; position:fixed; top: 35px; left:0px">
+		<i id="icon_nav_toggle" class="icon-arrow-left"></i>
+	</div>
+	<div id="scroll_tip" class="well affix-top" style="padding: 2px; position:fixed; right:0px; bottom:120px" onclick="javascript:scroll(0,0)">
+		<i class="icon-arrow-up"></i>
+	</div>
+	
+	<div class="container-fluid">
+		<div class="row-fluid">
+		
+			<!-- Header -->
+			<div class="span12">
+				<div class="well" style="padding: 7px; min-height:560px">
+					<div class="tabbable tabs-left">
+						<ul id="navigation" class="nav nav-tabs pull-left">
+							<li>
+								<label id="countdown"></label>
+							</li>
+							<li>
+								<div id="userinfo" style="display: block;">	<div class="mb_10">
+			<div style="text-align:center; padding:3px; margin: 0 auto" class="well">
+				<img src="../../images/avatar.gif">
+			</div>
+			<div style="text-align:center; margin: 3px auto 0">
+				<span class="label label-info">您已被强制离线</span>
+			</div>
+		</a>
+	</div>
+</div>
+								<div class="clearfix"></div>
+							<li class="nav_bar" id="nav_home">
+								<a href="../../index.html">主页</a>
+							</li>
+							<li class="nav_bar active" id="nav_contest">
+								<a href="../../problem_set.html">比赛</a>
+							</li>
+						</ul>
+						
+						<div id="page_content" class="tab-content" style="float: none; display: block;"><link href="_files/tablewithpin.css" rel="stylesheet">
+							<div class="navbar">
+	<div class="navbar-inner">
+		<ul class="nav">
+			<li><a href="../../problem_set.html"><img src="../../images/narrow-left.png" width="17" height="17"></a></li>
+			<li><a href="../home/2946">主页</a></li>
+            <li><a href="../../problem_set.html">题目</a></li>		</ul>
+	</div>
+</div>
+
+<div class="row-fluid">
+ <div id="header">
+  <div style="text-align:center">
+   <h2>
+    1265. Round Numbers(rndnum.pas/c/cpp)
+    <sub>
+     <br/>
+     (File IO):
+     <span style="color:red">
+      input:
+      <strong>
+       rndnum.in
+      </strong>
+      output:
+      <strong>
+       rndnum.out
+      </strong>
+     </span>
+    </sub>
+   </h2>
+   <div>
+    Time Limits:
+    <span class="badge badge-info">
+     1000 ms
+    </span>
+    Memory Limits:
+    <span class="badge badge-info">
+     65536 KB
+    </span>
+   </div>
+  </div>
+ </div>
+ <div class="row-fluid" style="margin-top:7px">
+  <div id="mainbar">
+   <div class="problem">
+    <div class="span12 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Description
+       </h4>
+      </legend>
+      <div class="content">
+       正如你所知，奶牛们没有手指以至于不能玩“石头剪刀布”来任意地决定例如谁先挤奶的顺序。她们甚至也不能通过仍硬币的方式。
+       <br/>
+       所以她们通过"round number"竞赛的方式。第一头牛选取一个整数，小于20亿。第二头牛也这样选取一个整数。如果这两个数都是 "round numbers"，那么第一头牛获胜，否则第二头牛获胜。
+       <br/>
+       如果一个正整数N的二进制表示中，0的个数大于或等于1的个数，那么N就被称为"round number" 。例如，整数9，二进制表示是1001，1001 有两个'0'和两个'1'; 因此，9是一个round number。26 的二进制表示是 11010 ; 由于它有2个'0'和3个'1'，所以它不是round number。
+       <br/>
+       很明显，奶牛们会花费很大精力去转换进制，从而确定谁是胜者。 Bessie 想要作弊，而且认为只要她能够知道在一个指定区间范围内的"round numbers"个数。
+       <br/>
+       帮助她写一个程序，能够告诉她在一个闭区间中有多少Hround numbers。区间是[start, finish]，包含这两个数。 (1 &lt;= Start &lt; Finish &lt;= 2,000,000,000)
+       <br/>
+       <br/>
+      </div>
+     </fieldset>
+    </div>
+    <div class="clearfix">
+    </div>
+    <div>
+     <div class="span6 well">
+      <fieldset>
+       <legend>
+        <h4>
+         Input
+        </h4>
+       </legend>
+       <div class="content">
+        Line 1: 两个用空格分开的整数，分别表示Start 和 Finish。
+       </div>
+      </fieldset>
+     </div>
+     <div class="span6 well">
+      <fieldset>
+       <legend>
+        <h4>
+         Output
+        </h4>
+       </legend>
+       <div class="content">
+        Line 1: Start..Finish范围内round numbers的个数
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="clearfix">
+    </div>
+    <div>
+     <div class="span6 well">
+      <fieldset>
+       <legend>
+        <h4>
+         Sample Input
+        </h4>
+       </legend>
+       <div class="content">
+        <pre style="border:none;font-size:110%">2 12</pre>
+       </div>
+       <!-- nl2br not needed in pre -->
+      </fieldset>
+     </div>
+     <div class="span6 well">
+      <fieldset>
+       <legend>
+        <h4>
+         Sample Output
+        </h4>
+       </legend>
+       <div class="content">
+        <pre style="border:none;font-size:110%">6</pre>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="clearfix">
+    </div>
+    <div class="well">
+     <fieldset>
+      <legend>
+       <h4>
+        Data Constraint
+       </h4>
+      </legend>
+      <div class="content">
+      </div>
+     </fieldset>
+    </div>
+    <div class="clearfix">
+    </div>
+    <div class="well">
+     <fieldset>
+      <legend>
+       <h4>
+        Hint
+       </h4>
+      </legend>
+      <div class="content">
+       【样例说明】
+       <br/>
+       2    10  1x0 + 1x1  ROUND
+       <br/>
+       3    11  0x0 + 2x1  NOT round
+       <br/>
+       4   100  2x0 + 1x1  ROUND
+       <br/>
+       5   101  1x0 + 2x1  NOT round
+       <br/>
+       6   110  1x0 + 2x1  NOT round
+       <br/>
+       7   111  0x0 + 3x1  NOT round
+       <br/>
+       8  1000  3x0 + 1x1  ROUND
+       <br/>
+       9  1001  2x0 + 2x1  ROUND
+       <br/>
+       10  1010  2x0 + 2x1  ROUND
+       <br/>
+       11  1011  1x0 + 3x1  NOT round
+       <br/>
+       12  1100  2x0 + 2x1  ROUND
+       <br/>
+       <br/>
+      </div>
+     </fieldset>
+    </div>
+   </div>
+  </div>
+ </div>
+ <div style="text-align:center">
+ </div>
+</div>
+
+<div class="row-fluid" style="margin-top:7px">
+ <div id="mainbar">
+  <div class="problem">
+   <div class="span12 well">
+    <fieldset>
+     <legend>
+      <h4>
+       Description
+      </h4>
+     </legend>
+     <div class="content">
+      正如你所知，奶牛们没有手指以至于不能玩“石头剪刀布”来任意地决定例如谁先挤奶的顺序。她们甚至也不能通过仍硬币的方式。
+      <br/>
+      所以她们通过"round number"竞赛的方式。第一头牛选取一个整数，小于20亿。第二头牛也这样选取一个整数。如果这两个数都是 "round numbers"，那么第一头牛获胜，否则第二头牛获胜。
+      <br/>
+      如果一个正整数N的二进制表示中，0的个数大于或等于1的个数，那么N就被称为"round number" 。例如，整数9，二进制表示是1001，1001 有两个'0'和两个'1'; 因此，9是一个round number。26 的二进制表示是 11010 ; 由于它有2个'0'和3个'1'，所以它不是round number。
+      <br/>
+      很明显，奶牛们会花费很大精力去转换进制，从而确定谁是胜者。 Bessie 想要作弊，而且认为只要她能够知道在一个指定区间范围内的"round numbers"个数。
+      <br/>
+      帮助她写一个程序，能够告诉她在一个闭区间中有多少Hround numbers。区间是[start, finish]，包含这两个数。 (1 &lt;= Start &lt; Finish &lt;= 2,000,000,000)
+      <br/>
+      <br/>
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Input
+       </h4>
+      </legend>
+      <div class="content">
+       Line 1: 两个用空格分开的整数，分别表示Start 和 Finish。
+      </div>
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Output
+       </h4>
+      </legend>
+      <div class="content">
+       Line 1: Start..Finish范围内round numbers的个数
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Input
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">2 12</pre>
+      </div>
+      <!-- nl2br not needed in pre -->
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Output
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">6</pre>
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div class="well">
+    <fieldset>
+     <legend>
+      <h4>
+       Data Constraint
+      </h4>
+     </legend>
+     <div class="content">
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div class="well">
+    <fieldset>
+     <legend>
+      <h4>
+       Hint
+      </h4>
+     </legend>
+     <div class="content">
+      【样例说明】
+      <br/>
+      2    10  1x0 + 1x1  ROUND
+      <br/>
+      3    11  0x0 + 2x1  NOT round
+      <br/>
+      4   100  2x0 + 1x1  ROUND
+      <br/>
+      5   101  1x0 + 2x1  NOT round
+      <br/>
+      6   110  1x0 + 2x1  NOT round
+      <br/>
+      7   111  0x0 + 3x1  NOT round
+      <br/>
+      8  1000  3x0 + 1x1  ROUND
+      <br/>
+      9  1001  2x0 + 2x1  ROUND
+      <br/>
+      10  1010  2x0 + 2x1  ROUND
+      <br/>
+      11  1011  1x0 + 3x1  NOT round
+      <br/>
+      12  1100  2x0 + 2x1  ROUND
+      <br/>
+      <br/>
+     </div>
+    </fieldset>
+   </div>
+  </div>
+ </div>
+</div>
+
+<div class="row-fluid" style="margin-top:7px">
+ <div id="mainbar">
+  <div class="problem">
+   <div class="span12 well">
+    <fieldset>
+     <legend>
+      <h4>
+       Description
+      </h4>
+     </legend>
+     <div class="content">
+      正如你所知，奶牛们没有手指以至于不能玩“石头剪刀布”来任意地决定例如谁先挤奶的顺序。她们甚至也不能通过仍硬币的方式。
+      <br/>
+      所以她们通过"round number"竞赛的方式。第一头牛选取一个整数，小于20亿。第二头牛也这样选取一个整数。如果这两个数都是 "round numbers"，那么第一头牛获胜，否则第二头牛获胜。
+      <br/>
+      如果一个正整数N的二进制表示中，0的个数大于或等于1的个数，那么N就被称为"round number" 。例如，整数9，二进制表示是1001，1001 有两个'0'和两个'1'; 因此，9是一个round number。26 的二进制表示是 11010 ; 由于它有2个'0'和3个'1'，所以它不是round number。
+      <br/>
+      很明显，奶牛们会花费很大精力去转换进制，从而确定谁是胜者。 Bessie 想要作弊，而且认为只要她能够知道在一个指定区间范围内的"round numbers"个数。
+      <br/>
+      帮助她写一个程序，能够告诉她在一个闭区间中有多少Hround numbers。区间是[start, finish]，包含这两个数。 (1 &lt;= Start &lt; Finish &lt;= 2,000,000,000)
+      <br/>
+      <br/>
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Input
+       </h4>
+      </legend>
+      <div class="content">
+       Line 1: 两个用空格分开的整数，分别表示Start 和 Finish。
+      </div>
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Output
+       </h4>
+      </legend>
+      <div class="content">
+       Line 1: Start..Finish范围内round numbers的个数
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Input
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">2 12</pre>
+      </div>
+      <!-- nl2br not needed in pre -->
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Output
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">6</pre>
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div class="well">
+    <fieldset>
+     <legend>
+      <h4>
+       Data Constraint
+      </h4>
+     </legend>
+     <div class="content">
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div class="well">
+    <fieldset>
+     <legend>
+      <h4>
+       Hint
+      </h4>
+     </legend>
+     <div class="content">
+      【样例说明】
+      <br/>
+      2    10  1x0 + 1x1  ROUND
+      <br/>
+      3    11  0x0 + 2x1  NOT round
+      <br/>
+      4   100  2x0 + 1x1  ROUND
+      <br/>
+      5   101  1x0 + 2x1  NOT round
+      <br/>
+      6   110  1x0 + 2x1  NOT round
+      <br/>
+      7   111  0x0 + 3x1  NOT round
+      <br/>
+      8  1000  3x0 + 1x1  ROUND
+      <br/>
+      9  1001  2x0 + 2x1  ROUND
+      <br/>
+      10  1010  2x0 + 2x1  ROUND
+      <br/>
+      11  1011  1x0 + 3x1  NOT round
+      <br/>
+      12  1100  2x0 + 2x1  ROUND
+      <br/>
+      <br/>
+     </div>
+    </fieldset>
+   </div>
+  </div>
+ </div>
+</div>
+
+
+<div style="text-align:center"></div>
+
+</div>
+						
+						<div class="clearfix"></div>
+					</div>
+					
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="clearfix"></div>
+		
+		<!-- footer -->
+		<div class="row-fluid">
+			<div class="span12" id="copyleft">
+				<label id="server_time">Server time: Mon Aug 10 2019 11:45:14 GMT+0800 (中国标准时间)</label>				<a href="https://github.com/roastduck/fortuna-oj" target="_blank">Fortuna OJ 项目</a><br>
+				Author: <a href="https://github.com/moreD" target="_blank">moreD</a>, <a href="https://github.com/roastduck" target="_blank">RD</a>;
+				Collaborator: <a href="https://github.com/tarawa" target="_blank">twilight</a>, <a href="https://github.com/mchobbylong" target="_blank">McHobby</a><br>
+				Powered by CodeIgniter / Bootstrap<br>
+				Icons provided by <a href="http://glyphicons.com/">Glyphicons</a><br>
+							</div>
+		</div>
+		
+	</div>
+	
+	<div class="overlay" style="z-index: -1000; display: none; opacity: 0;"></div>
+
+
+
+</body></html>

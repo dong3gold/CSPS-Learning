@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)https://gmoj.net/senior/#contest -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+		
+		<title>Gold Medal Online Judge System</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Fortuna Online Judge System Default Framework">
+		<meta name="author" content="moreD">
+		
+
+		<link href="../../_files/bootstrap.min.css" rel="stylesheet">
+		<link href="../../_files/bootstrap-responsive.min.css" rel="stylesheet">
+		<link href="../../_files/style.css" rel="stylesheet">
+
+		<script> OJTitle = "Gold Medal Online Judge System"; </script>
+		
+		<style>.cke{visibility:hidden;}</style>	
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+			
+		<![endif]-->
+	</head>
+
+<body onload="init_framework()">
+	<div id="nav_toggle" class="well" style="padding: 2px; position:fixed; top: 35px; left:0px">
+		<i id="icon_nav_toggle" class="icon-arrow-left"></i>
+	</div>
+	<div id="scroll_tip" class="well affix-top" style="padding: 2px; position:fixed; right:0px; bottom:120px" onclick="javascript:scroll(0,0)">
+		<i class="icon-arrow-up"></i>
+	</div>
+	
+	<div class="container-fluid">
+		<div class="row-fluid">
+		
+			<!-- Header -->
+			<div class="span12">
+				<div class="well" style="padding: 7px; min-height:560px">
+					<div class="tabbable tabs-left">
+						<ul id="navigation" class="nav nav-tabs pull-left">
+							<li>
+								<label id="countdown"></label>
+							</li>
+							<li>
+								<div id="userinfo" style="display: block;">	<div class="mb_10">
+			<div style="text-align:center; padding:3px; margin: 0 auto" class="well">
+				<img src="../../images/avatar.gif">
+			</div>
+			<div style="text-align:center; margin: 3px auto 0">
+				<span class="label label-info">您已被强制离线</span>
+			</div>
+		</a>
+	</div>
+</div>
+								<div class="clearfix"></div>
+							<li class="nav_bar" id="nav_home">
+								<a href="../../index.html">主页</a>
+							</li>
+							<li class="nav_bar active" id="nav_contest">
+								<a href="../../problem_set.html">比赛</a>
+							</li>
+						</ul>
+						
+						<div id="page_content" class="tab-content" style="float: none; display: block;"><link href="_files/tablewithpin.css" rel="stylesheet">
+							<div class="navbar">
+	<div class="navbar-inner">
+		<ul class="nav">
+			<li><a href="../../problem_set.html"><img src="../../images/narrow-left.png" width="17" height="17"></a></li>
+			<li><a href="../home/2926">主页</a></li>
+            <li><a href="../../problem_set.html">题目</a></li>		</ul>
+	</div>
+</div>
+
+<div class="row-fluid">
+ <div id="header">
+  <div style="text-align:center">
+   <h2>
+    1221. King
+    <sub>
+     (Standard IO)
+    </sub>
+   </h2>
+   <div>
+    Time Limits:
+    <span class="badge badge-info">
+     1000 ms
+    </span>
+    Memory Limits:
+    <span class="badge badge-info">
+     262144 KB
+    </span>
+   </div>
+  </div>
+ </div>
+ <div class="row-fluid" style="margin-top:7px">
+  <div id="mainbar">
+   <div class="problem">
+    <div class="span12 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Description
+       </h4>
+      </legend>
+      <div class="content">
+       话说某天在同桌TQH 的鼓励的背景下，Mpq 一时头脑发热，做了一个课题叫《人工智
+       <br/>
+       能的初步研究》的研究性学习报告。其实课题的题目比较夸张，事实上内容却很肤浅-_-!说
+       <br/>
+       白了就是一个五子棋的博弈程序。。。。
+       <br/>
+       如果你想得到虐电脑的那种快感的话，请狂砸：www.mpqblog.cn/FiveStoneFinal.rar
+       <br/>
+       如果你想尝试被电脑虐的那种感觉的话，请狂砸：www.mpqblog.cn/Five.rar
+       <br/>
+       好吧，言归正传……研究过五子棋之后，Mpq 开始对国际象棋有兴趣了，所以，接下
+       <br/>
+       来的话题当然是有关于国际象棋的啦^_^
+       <br/>
+       Mpq 听说国际象棋中有一种叫King 的动物，他能攻击的范围是八个方向与它相邻的格
+       <br/>
+       子。如图，黑色表示棋子，他能攻击的范围就是它周围8 个方向的相邻格子。。
+       <br/>
+       <img border="0" p="" src="data:image/JPG;base64,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"/>
+       <br/>
+       Task：给出一个N*N(1≤N≤15)的棋盘，然后让你在棋盘中放置M(1≤M≤((N+1)/2)^2
+       <br/>
+       个King，使得他们不能互相攻击。问你有多少种不同的方案。。由于方案数过多，所以你只
+       <br/>
+       要输出方案数模123456788。。。
+       <br/>
+       Er，如果你要问这个题和研究国际象棋有什么关系，其实我可以告诉你，没什么关系。。。
+      </div>
+     </fieldset>
+    </div>
+    <div class="clearfix">
+    </div>
+    <div>
+     <div class="span6 well">
+      <fieldset>
+       <legend>
+        <h4>
+         Input
+        </h4>
+       </legend>
+       <div class="content">
+        输入文件仅包含一行，有两个整数N 和M（1≤N≤15，1≤M≤((N+1)/2)^2）。
+       </div>
+      </fieldset>
+     </div>
+     <div class="span6 well">
+      <fieldset>
+       <legend>
+        <h4>
+         Output
+        </h4>
+       </legend>
+       <div class="content">
+        输出文件仅包含一行，一个整数，表示方案数模123456788 之后的数。
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="clearfix">
+    </div>
+    <div>
+     <div class="span6 well">
+      <fieldset>
+       <legend>
+        <h4>
+         Sample Input
+        </h4>
+       </legend>
+       <div class="content">
+        <pre style="border:none;font-size:110%">3 2</pre>
+       </div>
+       <!-- nl2br not needed in pre -->
+      </fieldset>
+     </div>
+     <div class="span6 well">
+      <fieldset>
+       <legend>
+        <h4>
+         Sample Output
+        </h4>
+       </legend>
+       <div class="content">
+        <pre style="border:none;font-size:110%">16</pre>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="clearfix">
+    </div>
+    <div class="well">
+     <fieldset>
+      <legend>
+       <h4>
+        Data Constraint
+       </h4>
+      </legend>
+      <div class="content">
+      </div>
+     </fieldset>
+    </div>
+    <div class="clearfix">
+    </div>
+    <div class="well">
+     <fieldset>
+      <legend>
+       <h4>
+        Hint
+       </h4>
+      </legend>
+      <div class="content">
+       数据约定：
+       <br/>
+       对于30%的数据,1≤N≤7，1≤M≤8
+       <br/>
+       对于60%的数据,1≤N≤10 ，1≤M≤(N+1)/2)^2
+       <br/>
+       对于100%的数据1≤N≤15，1≤M≤(N+1)/2)^2
+      </div>
+     </fieldset>
+    </div>
+   </div>
+  </div>
+ </div>
+ <div style="text-align:center">
+ </div>
+</div>
+
+<div class="row-fluid" style="margin-top:7px">
+ <div id="mainbar">
+  <div class="problem">
+   <div class="span12 well">
+    <fieldset>
+     <legend>
+      <h4>
+       Description
+      </h4>
+     </legend>
+     <div class="content">
+      话说某天在同桌TQH 的鼓励的背景下，Mpq 一时头脑发热，做了一个课题叫《人工智
+      <br/>
+      能的初步研究》的研究性学习报告。其实课题的题目比较夸张，事实上内容却很肤浅-_-!说
+      <br/>
+      白了就是一个五子棋的博弈程序。。。。
+      <br/>
+      如果你想得到虐电脑的那种快感的话，请狂砸：www.mpqblog.cn/FiveStoneFinal.rar
+      <br/>
+      如果你想尝试被电脑虐的那种感觉的话，请狂砸：www.mpqblog.cn/Five.rar
+      <br/>
+      好吧，言归正传……研究过五子棋之后，Mpq 开始对国际象棋有兴趣了，所以，接下
+      <br/>
+      来的话题当然是有关于国际象棋的啦^_^
+      <br/>
+      Mpq 听说国际象棋中有一种叫King 的动物，他能攻击的范围是八个方向与它相邻的格
+      <br/>
+      子。如图，黑色表示棋子，他能攻击的范围就是它周围8 个方向的相邻格子。。
+      <br/>
+      <img border="0" p="" src="data:image/JPG;base64,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"/>
+      <br/>
+      Task：给出一个N*N(1≤N≤15)的棋盘，然后让你在棋盘中放置M(1≤M≤((N+1)/2)^2
+      <br/>
+      个King，使得他们不能互相攻击。问你有多少种不同的方案。。由于方案数过多，所以你只
+      <br/>
+      要输出方案数模123456788。。。
+      <br/>
+      Er，如果你要问这个题和研究国际象棋有什么关系，其实我可以告诉你，没什么关系。。。
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Input
+       </h4>
+      </legend>
+      <div class="content">
+       输入文件仅包含一行，有两个整数N 和M（1≤N≤15，1≤M≤((N+1)/2)^2）。
+      </div>
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Output
+       </h4>
+      </legend>
+      <div class="content">
+       输出文件仅包含一行，一个整数，表示方案数模123456788 之后的数。
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Input
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">3 2</pre>
+      </div>
+      <!-- nl2br not needed in pre -->
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Output
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">16</pre>
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div class="well">
+    <fieldset>
+     <legend>
+      <h4>
+       Data Constraint
+      </h4>
+     </legend>
+     <div class="content">
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div class="well">
+    <fieldset>
+     <legend>
+      <h4>
+       Hint
+      </h4>
+     </legend>
+     <div class="content">
+      数据约定：
+      <br/>
+      对于30%的数据,1≤N≤7，1≤M≤8
+      <br/>
+      对于60%的数据,1≤N≤10 ，1≤M≤(N+1)/2)^2
+      <br/>
+      对于100%的数据1≤N≤15，1≤M≤(N+1)/2)^2
+     </div>
+    </fieldset>
+   </div>
+  </div>
+ </div>
+</div>
+
+<div class="row-fluid" style="margin-top:7px">
+ <div id="mainbar">
+  <div class="problem">
+   <div class="span12 well">
+    <fieldset>
+     <legend>
+      <h4>
+       Description
+      </h4>
+     </legend>
+     <div class="content">
+      话说某天在同桌TQH 的鼓励的背景下，Mpq 一时头脑发热，做了一个课题叫《人工智
+      <br/>
+      能的初步研究》的研究性学习报告。其实课题的题目比较夸张，事实上内容却很肤浅-_-!说
+      <br/>
+      白了就是一个五子棋的博弈程序。。。。
+      <br/>
+      如果你想得到虐电脑的那种快感的话，请狂砸：www.mpqblog.cn/FiveStoneFinal.rar
+      <br/>
+      如果你想尝试被电脑虐的那种感觉的话，请狂砸：www.mpqblog.cn/Five.rar
+      <br/>
+      好吧，言归正传……研究过五子棋之后，Mpq 开始对国际象棋有兴趣了，所以，接下
+      <br/>
+      来的话题当然是有关于国际象棋的啦^_^
+      <br/>
+      Mpq 听说国际象棋中有一种叫King 的动物，他能攻击的范围是八个方向与它相邻的格
+      <br/>
+      子。如图，黑色表示棋子，他能攻击的范围就是它周围8 个方向的相邻格子。。
+      <br/>
+      <img border="0" p="" src="data:image/JPG;base64,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"/>
+      <br/>
+      Task：给出一个N*N(1≤N≤15)的棋盘，然后让你在棋盘中放置M(1≤M≤((N+1)/2)^2
+      <br/>
+      个King，使得他们不能互相攻击。问你有多少种不同的方案。。由于方案数过多，所以你只
+      <br/>
+      要输出方案数模123456788。。。
+      <br/>
+      Er，如果你要问这个题和研究国际象棋有什么关系，其实我可以告诉你，没什么关系。。。
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Input
+       </h4>
+      </legend>
+      <div class="content">
+       输入文件仅包含一行，有两个整数N 和M（1≤N≤15，1≤M≤((N+1)/2)^2）。
+      </div>
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Output
+       </h4>
+      </legend>
+      <div class="content">
+       输出文件仅包含一行，一个整数，表示方案数模123456788 之后的数。
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Input
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">3 2</pre>
+      </div>
+      <!-- nl2br not needed in pre -->
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Output
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">16</pre>
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div class="well">
+    <fieldset>
+     <legend>
+      <h4>
+       Data Constraint
+      </h4>
+     </legend>
+     <div class="content">
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div class="well">
+    <fieldset>
+     <legend>
+      <h4>
+       Hint
+      </h4>
+     </legend>
+     <div class="content">
+      数据约定：
+      <br/>
+      对于30%的数据,1≤N≤7，1≤M≤8
+      <br/>
+      对于60%的数据,1≤N≤10 ，1≤M≤(N+1)/2)^2
+      <br/>
+      对于100%的数据1≤N≤15，1≤M≤(N+1)/2)^2
+     </div>
+    </fieldset>
+   </div>
+  </div>
+ </div>
+</div>
+
+
+<div style="text-align:center"></div>
+
+</div>
+						
+						<div class="clearfix"></div>
+					</div>
+					
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="clearfix"></div>
+		
+		<!-- footer -->
+		<div class="row-fluid">
+			<div class="span12" id="copyleft">
+				<label id="server_time">Server time: Mon Aug 10 2019 11:45:14 GMT+0800 (中国标准时间)</label>				<a href="https://github.com/roastduck/fortuna-oj" target="_blank">Fortuna OJ 项目</a><br>
+				Author: <a href="https://github.com/moreD" target="_blank">moreD</a>, <a href="https://github.com/roastduck" target="_blank">RD</a>;
+				Collaborator: <a href="https://github.com/tarawa" target="_blank">twilight</a>, <a href="https://github.com/mchobbylong" target="_blank">McHobby</a><br>
+				Powered by CodeIgniter / Bootstrap<br>
+				Icons provided by <a href="http://glyphicons.com/">Glyphicons</a><br>
+							</div>
+		</div>
+		
+	</div>
+	
+	<div class="overlay" style="z-index: -1000; display: none; opacity: 0;"></div>
+
+
+
+</body></html>

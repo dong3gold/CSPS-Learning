@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)https://gmoj.net/senior/#contest -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+		
+		<title>Gold Medal Online Judge System</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Fortuna Online Judge System Default Framework">
+		<meta name="author" content="moreD">
+		
+
+		<link href="../../_files/bootstrap.min.css" rel="stylesheet">
+		<link href="../../_files/bootstrap-responsive.min.css" rel="stylesheet">
+		<link href="../../_files/style.css" rel="stylesheet">
+
+		<script> OJTitle = "Gold Medal Online Judge System"; </script>
+		
+		<style>.cke{visibility:hidden;}</style>	
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+			
+		<![endif]-->
+	</head>
+
+<body onload="init_framework()">
+	<div id="nav_toggle" class="well" style="padding: 2px; position:fixed; top: 35px; left:0px">
+		<i id="icon_nav_toggle" class="icon-arrow-left"></i>
+	</div>
+	<div id="scroll_tip" class="well affix-top" style="padding: 2px; position:fixed; right:0px; bottom:120px" onclick="javascript:scroll(0,0)">
+		<i class="icon-arrow-up"></i>
+	</div>
+	
+	<div class="container-fluid">
+		<div class="row-fluid">
+		
+			<!-- Header -->
+			<div class="span12">
+				<div class="well" style="padding: 7px; min-height:560px">
+					<div class="tabbable tabs-left">
+						<ul id="navigation" class="nav nav-tabs pull-left">
+							<li>
+								<label id="countdown"></label>
+							</li>
+							<li>
+								<div id="userinfo" style="display: block;">	<div class="mb_10">
+			<div style="text-align:center; padding:3px; margin: 0 auto" class="well">
+				<img src="../../images/avatar.gif">
+			</div>
+			<div style="text-align:center; margin: 3px auto 0">
+				<span class="label label-info">您已被强制离线</span>
+			</div>
+		</a>
+	</div>
+</div>
+								<div class="clearfix"></div>
+							<li class="nav_bar" id="nav_home">
+								<a href="../../index.html">主页</a>
+							</li>
+							<li class="nav_bar active" id="nav_contest">
+								<a href="../../problem_set.html">比赛</a>
+							</li>
+						</ul>
+						
+						<div id="page_content" class="tab-content" style="float: none; display: block;"><link href="_files/tablewithpin.css" rel="stylesheet">
+							<div class="navbar">
+	<div class="navbar-inner">
+		<ul class="nav">
+			<li><a href="../../problem_set.html"><img src="../../images/narrow-left.png" width="17" height="17"></a></li>
+			<li><a href="../home/2943">主页</a></li>
+            <li><a href="../../problem_set.html">题目</a></li>		</ul>
+	</div>
+</div>
+
+<div class="row-fluid">
+ <div id="header">
+  <div style="text-align:center">
+   <h2>
+    6419. 【NOIP2019模拟2019.11.10】模拟旅行
+    <sub>
+     <br/>
+     (File IO):
+     <span style="color:red">
+      input:
+      <strong>
+       tour.in
+      </strong>
+      output:
+      <strong>
+       tour.out
+      </strong>
+     </span>
+    </sub>
+   </h2>
+   <div>
+    Time Limits:
+    <span class="badge badge-info">
+     2000 ms
+    </span>
+    Memory Limits:
+    <span class="badge badge-info">
+     524288 KB
+    </span>
+   </div>
+  </div>
+ </div>
+ <div class="row-fluid" style="margin-top:7px">
+  <div id="mainbar">
+   <div class="problem">
+    <div class="span12 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Description
+       </h4>
+      </legend>
+      <div class="content">
+       某国有n座城市，这些城市之间通过m条单向道路相连，已知每条道路的长度。
+       <br/>
+       不过，小X只对其中k座城市感兴趣。
+       <br/>
+       为了更好地规划模拟旅行路线，提升模拟旅行的体验，小X想要知道他感兴趣的城市之间
+       <span style="font-weight:bold;">
+        两两最短路
+       </span>
+       的最小值（即在他感兴趣的城市中，最近的一对的最短距离）。
+       <br/>
+       作为一个肥宅，小X根本懒得写程序来解决这道问题，于是他把这个问题丢给了你。
+      </div>
+     </fieldset>
+    </div>
+    <div class="clearfix">
+    </div>
+    <div>
+     <div class="span6 well">
+      <fieldset>
+       <legend>
+        <h4>
+         Input
+        </h4>
+       </legend>
+       <div class="content">
+        从文件tour.in中读入数据。
+        <br/>
+        第一行包含三个正整数n,m,k，表示有n座城市（从1∼n编号），m 条道路，小X感兴趣的城市有k个。
+        <br/>
+        接下来m行，每行包括3个正整数x,y,z，表示从第x号城市到第y号城市有一条长度为z的单向道路。注意x,y可能相等，一对x,y也可能重复出现。
+        <br/>
+        接下来一行包括k个正整数，表示小X感兴趣的城市的编号，保证互不相同。
+       </div>
+      </fieldset>
+     </div>
+     <div class="span6 well">
+      <fieldset>
+       <legend>
+        <h4>
+         Output
+        </h4>
+       </legend>
+       <div class="content">
+        输出到文件tour.out中。
+        <br/>
+        输出一个整数表示k座城市之间两两最短路的最小值，保证存在至少一对点可达。
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="clearfix">
+    </div>
+    <div>
+     <div class="span6 well">
+      <fieldset>
+       <legend>
+        <h4>
+         Sample Input
+        </h4>
+       </legend>
+       <div class="content">
+        <pre style="border:none;font-size:110%">输入1：
+6 7 3
+1 5 3
+2 3 5
+1 4 3
+5 3 2
+4 6 5
+4 3 7
+5 6 4
+1 3 6
+
+输入2：
+7 7 4
+5 3 10
+6 2 7
+1 2 6
+5 4 2
+4 3 4
+1 7 3
+7 2 4
+1 2 5 3</pre>
+       </div>
+       <!-- nl2br not needed in pre -->
+      </fieldset>
+     </div>
+     <div class="span6 well">
+      <fieldset>
+       <legend>
+        <h4>
+         Sample Output
+        </h4>
+       </legend>
+       <div class="content">
+        <pre style="border:none;font-size:110%">输出1：
+5
+样例解释： 
+1到3最短路为5；1到6最短路为7；3,6无法到达，所以最近的两点为1,3，最近的距离为5。
+
+输出2：
+6
+样例解释： 
+1到2最短路为6；5到3最短路为6；其余的点均无法互相到达，所以最近的两点为1, 2和5,3，最近的距离为6。 </pre>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="clearfix">
+    </div>
+    <div class="well">
+     <fieldset>
+      <legend>
+       <h4>
+        Data Constraint
+       </h4>
+      </legend>
+      <div class="content">
+       对于所有数据，有2&lt;=k&lt;=n,1&lt;=x,y&lt;=n,1&lt;=z&lt;=2*10^9。
+       <br/>
+       本题采用捆绑测试。对于一个子任务你需要通过它包含的所有测试点才能得到该子任务的分数。
+       <br/>
+       Subtask1: 6pts, n≤300,m≤10^6。
+       <br/>
+       Subtask2: 14pts, n≤1000,m≤5000。
+       <br/>
+       Subtask3: 12pts, k≤10,n≤10^5,m≤3×10^5。
+       <br/>
+       Subtask4: 10pts, n≤10^5,m≤5×10^5，保证给出的图是一个有向无环图。
+       <br/>
+       Subtask5: 18pts, n≤10^5,m≤2×10^5。
+       <br/>
+       Subtask6: 40pts, n≤3×10^5,m≤10^6。
+      </div>
+     </fieldset>
+    </div>
+    <div class="clearfix">
+    </div>
+    <div class="well">
+     <fieldset>
+      <legend>
+       <h4>
+        Hint
+       </h4>
+      </legend>
+      <div class="content">
+       请注意读入数据的效率对程序运行效率的影响。
+      </div>
+     </fieldset>
+    </div>
+   </div>
+  </div>
+ </div>
+ <div style="text-align:center">
+ </div>
+</div>
+
+<div class="row-fluid" style="margin-top:7px">
+ <div id="mainbar">
+  <div class="problem">
+   <div class="span12 well">
+    <fieldset>
+     <legend>
+      <h4>
+       Description
+      </h4>
+     </legend>
+     <div class="content">
+      某国有n座城市，这些城市之间通过m条单向道路相连，已知每条道路的长度。
+      <br/>
+      不过，小X只对其中k座城市感兴趣。
+      <br/>
+      为了更好地规划模拟旅行路线，提升模拟旅行的体验，小X想要知道他感兴趣的城市之间
+      <span style="font-weight:bold;">
+       两两最短路
+      </span>
+      的最小值（即在他感兴趣的城市中，最近的一对的最短距离）。
+      <br/>
+      作为一个肥宅，小X根本懒得写程序来解决这道问题，于是他把这个问题丢给了你。
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Input
+       </h4>
+      </legend>
+      <div class="content">
+       从文件tour.in中读入数据。
+       <br/>
+       第一行包含三个正整数n,m,k，表示有n座城市（从1∼n编号），m 条道路，小X感兴趣的城市有k个。
+       <br/>
+       接下来m行，每行包括3个正整数x,y,z，表示从第x号城市到第y号城市有一条长度为z的单向道路。注意x,y可能相等，一对x,y也可能重复出现。
+       <br/>
+       接下来一行包括k个正整数，表示小X感兴趣的城市的编号，保证互不相同。
+      </div>
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Output
+       </h4>
+      </legend>
+      <div class="content">
+       输出到文件tour.out中。
+       <br/>
+       输出一个整数表示k座城市之间两两最短路的最小值，保证存在至少一对点可达。
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Input
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">输入1：
+6 7 3
+1 5 3
+2 3 5
+1 4 3
+5 3 2
+4 6 5
+4 3 7
+5 6 4
+1 3 6
+
+输入2：
+7 7 4
+5 3 10
+6 2 7
+1 2 6
+5 4 2
+4 3 4
+1 7 3
+7 2 4
+1 2 5 3</pre>
+      </div>
+      <!-- nl2br not needed in pre -->
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Output
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">输出1：
+5
+样例解释： 
+1到3最短路为5；1到6最短路为7；3,6无法到达，所以最近的两点为1,3，最近的距离为5。
+
+输出2：
+6
+样例解释： 
+1到2最短路为6；5到3最短路为6；其余的点均无法互相到达，所以最近的两点为1, 2和5,3，最近的距离为6。 </pre>
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div class="well">
+    <fieldset>
+     <legend>
+      <h4>
+       Data Constraint
+      </h4>
+     </legend>
+     <div class="content">
+      对于所有数据，有2&lt;=k&lt;=n,1&lt;=x,y&lt;=n,1&lt;=z&lt;=2*10^9。
+      <br/>
+      本题采用捆绑测试。对于一个子任务你需要通过它包含的所有测试点才能得到该子任务的分数。
+      <br/>
+      Subtask1: 6pts, n≤300,m≤10^6。
+      <br/>
+      Subtask2: 14pts, n≤1000,m≤5000。
+      <br/>
+      Subtask3: 12pts, k≤10,n≤10^5,m≤3×10^5。
+      <br/>
+      Subtask4: 10pts, n≤10^5,m≤5×10^5，保证给出的图是一个有向无环图。
+      <br/>
+      Subtask5: 18pts, n≤10^5,m≤2×10^5。
+      <br/>
+      Subtask6: 40pts, n≤3×10^5,m≤10^6。
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div class="well">
+    <fieldset>
+     <legend>
+      <h4>
+       Hint
+      </h4>
+     </legend>
+     <div class="content">
+      请注意读入数据的效率对程序运行效率的影响。
+     </div>
+    </fieldset>
+   </div>
+  </div>
+ </div>
+</div>
+
+<div class="row-fluid" style="margin-top:7px">
+ <div id="mainbar">
+  <div class="problem">
+   <div class="span12 well">
+    <fieldset>
+     <legend>
+      <h4>
+       Description
+      </h4>
+     </legend>
+     <div class="content">
+      某国有n座城市，这些城市之间通过m条单向道路相连，已知每条道路的长度。
+      <br/>
+      不过，小X只对其中k座城市感兴趣。
+      <br/>
+      为了更好地规划模拟旅行路线，提升模拟旅行的体验，小X想要知道他感兴趣的城市之间
+      <span style="font-weight:bold;">
+       两两最短路
+      </span>
+      的最小值（即在他感兴趣的城市中，最近的一对的最短距离）。
+      <br/>
+      作为一个肥宅，小X根本懒得写程序来解决这道问题，于是他把这个问题丢给了你。
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Input
+       </h4>
+      </legend>
+      <div class="content">
+       从文件tour.in中读入数据。
+       <br/>
+       第一行包含三个正整数n,m,k，表示有n座城市（从1∼n编号），m 条道路，小X感兴趣的城市有k个。
+       <br/>
+       接下来m行，每行包括3个正整数x,y,z，表示从第x号城市到第y号城市有一条长度为z的单向道路。注意x,y可能相等，一对x,y也可能重复出现。
+       <br/>
+       接下来一行包括k个正整数，表示小X感兴趣的城市的编号，保证互不相同。
+      </div>
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Output
+       </h4>
+      </legend>
+      <div class="content">
+       输出到文件tour.out中。
+       <br/>
+       输出一个整数表示k座城市之间两两最短路的最小值，保证存在至少一对点可达。
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Input
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">输入1：
+6 7 3
+1 5 3
+2 3 5
+1 4 3
+5 3 2
+4 6 5
+4 3 7
+5 6 4
+1 3 6
+
+输入2：
+7 7 4
+5 3 10
+6 2 7
+1 2 6
+5 4 2
+4 3 4
+1 7 3
+7 2 4
+1 2 5 3</pre>
+      </div>
+      <!-- nl2br not needed in pre -->
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Output
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">输出1：
+5
+样例解释： 
+1到3最短路为5；1到6最短路为7；3,6无法到达，所以最近的两点为1,3，最近的距离为5。
+
+输出2：
+6
+样例解释： 
+1到2最短路为6；5到3最短路为6；其余的点均无法互相到达，所以最近的两点为1, 2和5,3，最近的距离为6。 </pre>
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div class="well">
+    <fieldset>
+     <legend>
+      <h4>
+       Data Constraint
+      </h4>
+     </legend>
+     <div class="content">
+      对于所有数据，有2&lt;=k&lt;=n,1&lt;=x,y&lt;=n,1&lt;=z&lt;=2*10^9。
+      <br/>
+      本题采用捆绑测试。对于一个子任务你需要通过它包含的所有测试点才能得到该子任务的分数。
+      <br/>
+      Subtask1: 6pts, n≤300,m≤10^6。
+      <br/>
+      Subtask2: 14pts, n≤1000,m≤5000。
+      <br/>
+      Subtask3: 12pts, k≤10,n≤10^5,m≤3×10^5。
+      <br/>
+      Subtask4: 10pts, n≤10^5,m≤5×10^5，保证给出的图是一个有向无环图。
+      <br/>
+      Subtask5: 18pts, n≤10^5,m≤2×10^5。
+      <br/>
+      Subtask6: 40pts, n≤3×10^5,m≤10^6。
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div class="well">
+    <fieldset>
+     <legend>
+      <h4>
+       Hint
+      </h4>
+     </legend>
+     <div class="content">
+      请注意读入数据的效率对程序运行效率的影响。
+     </div>
+    </fieldset>
+   </div>
+  </div>
+ </div>
+</div>
+
+
+<div style="text-align:center"></div>
+
+</div>
+						
+						<div class="clearfix"></div>
+					</div>
+					
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="clearfix"></div>
+		
+		<!-- footer -->
+		<div class="row-fluid">
+			<div class="span12" id="copyleft">
+				<label id="server_time">Server time: Mon Aug 10 2019 11:45:14 GMT+0800 (中国标准时间)</label>				<a href="https://github.com/roastduck/fortuna-oj" target="_blank">Fortuna OJ 项目</a><br>
+				Author: <a href="https://github.com/moreD" target="_blank">moreD</a>, <a href="https://github.com/roastduck" target="_blank">RD</a>;
+				Collaborator: <a href="https://github.com/tarawa" target="_blank">twilight</a>, <a href="https://github.com/mchobbylong" target="_blank">McHobby</a><br>
+				Powered by CodeIgniter / Bootstrap<br>
+				Icons provided by <a href="http://glyphicons.com/">Glyphicons</a><br>
+							</div>
+		</div>
+		
+	</div>
+	
+	<div class="overlay" style="z-index: -1000; display: none; opacity: 0;"></div>
+
+
+
+</body></html>

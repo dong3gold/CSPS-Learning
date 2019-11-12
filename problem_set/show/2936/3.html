@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)https://gmoj.net/senior/#contest -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+		
+		<title>Gold Medal Online Judge System</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Fortuna Online Judge System Default Framework">
+		<meta name="author" content="moreD">
+		
+
+		<link href="../../_files/bootstrap.min.css" rel="stylesheet">
+		<link href="../../_files/bootstrap-responsive.min.css" rel="stylesheet">
+		<link href="../../_files/style.css" rel="stylesheet">
+
+		<script> OJTitle = "Gold Medal Online Judge System"; </script>
+		
+		<style>.cke{visibility:hidden;}</style>	
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+			
+		<![endif]-->
+	</head>
+
+<body onload="init_framework()">
+	<div id="nav_toggle" class="well" style="padding: 2px; position:fixed; top: 35px; left:0px">
+		<i id="icon_nav_toggle" class="icon-arrow-left"></i>
+	</div>
+	<div id="scroll_tip" class="well affix-top" style="padding: 2px; position:fixed; right:0px; bottom:120px" onclick="javascript:scroll(0,0)">
+		<i class="icon-arrow-up"></i>
+	</div>
+	
+	<div class="container-fluid">
+		<div class="row-fluid">
+		
+			<!-- Header -->
+			<div class="span12">
+				<div class="well" style="padding: 7px; min-height:560px">
+					<div class="tabbable tabs-left">
+						<ul id="navigation" class="nav nav-tabs pull-left">
+							<li>
+								<label id="countdown"></label>
+							</li>
+							<li>
+								<div id="userinfo" style="display: block;">	<div class="mb_10">
+			<div style="text-align:center; padding:3px; margin: 0 auto" class="well">
+				<img src="../../images/avatar.gif">
+			</div>
+			<div style="text-align:center; margin: 3px auto 0">
+				<span class="label label-info">您已被强制离线</span>
+			</div>
+		</a>
+	</div>
+</div>
+								<div class="clearfix"></div>
+							<li class="nav_bar" id="nav_home">
+								<a href="../../index.html">主页</a>
+							</li>
+							<li class="nav_bar active" id="nav_contest">
+								<a href="../../problem_set.html">比赛</a>
+							</li>
+						</ul>
+						
+						<div id="page_content" class="tab-content" style="float: none; display: block;"><link href="_files/tablewithpin.css" rel="stylesheet">
+							<div class="navbar">
+	<div class="navbar-inner">
+		<ul class="nav">
+			<li><a href="../../problem_set.html"><img src="../../images/narrow-left.png" width="17" height="17"></a></li>
+			<li><a href="../home/2936">主页</a></li>
+            <li><a href="../../problem_set.html">题目</a></li>		</ul>
+	</div>
+</div>
+
+<div class="row-fluid">
+ <div id="header">
+  <div style="text-align:center">
+   <h2>
+    1247. 队列变换
+    <sub>
+     (Standard IO)
+    </sub>
+   </h2>
+   <div>
+    Time Limits:
+    <span class="badge badge-info">
+     1000 ms
+    </span>
+    Memory Limits:
+    <span class="badge badge-info">
+     65536 KB
+    </span>
+   </div>
+  </div>
+ </div>
+ <div class="row-fluid" style="margin-top:7px">
+  <div id="mainbar">
+   <div class="problem">
+    <div class="span12 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Description
+       </h4>
+      </legend>
+      <div class="content">
+       FJ打算带他的N(1 &lt;= N &lt;= 30,000)头奶牛去参加一年一度的“全美农场主大奖赛”。在这场比赛中，每个参赛者都必须让他的奶牛排成一列，然后领她们从裁判席前依次走过。
+       <br/>
+       今年，竞赛委员会在接受队伍报名时，采用了一种新的登记规则：他们把所有队伍中奶牛名字的首字母取出，按它们对应奶牛在队伍中的次序排成一列（比如说，如果FJ带去的奶牛依次为Bessie、Sylvia、Dora，登记人员就把这支队伍登记为BSD）。登记结束后，组委会将所有队伍的登记名称按字典序升序排列，就得到了他们的出场顺序。
+       <br/>
+       FJ最近有一大堆事情，因此他不打算在这个比赛上浪费过多的时间，也就是说，他想尽可能早地出场。于是，他打算把奶牛们预先设计好的队型重新调整一下。
+       <br/>
+       FJ的调整方法是这样的：每次，他在原来队列的首端或是尾端牵出一头奶牛，把她安排到新队列的尾部，然后对剩余的奶牛队列重复以上的操作，直到所有奶牛都被插到了新的队列里。这样得到的队列，就是FJ拉去登记的最终的奶牛队列。
+       <br/>
+       接下来的事情就交给你了：对于给定的奶牛们的初始位置，计算出按照FJ的调整规则所可能得到的字典序最小的队列。
+       <br/>
+      </div>
+     </fieldset>
+    </div>
+    <div class="clearfix">
+    </div>
+    <div>
+     <div class="span6 well">
+      <fieldset>
+       <legend>
+        <h4>
+         Input
+        </h4>
+       </legend>
+       <div class="content">
+        * 第1行: 一个整数：N
+        <br/>
+        * 第2..N+1行: 第i+1行仅有1个'A'..'Z'中的字母，表示队列中从前往后数第i头奶牛名字的首字母
+        <br/>
+       </div>
+      </fieldset>
+     </div>
+     <div class="span6 well">
+      <fieldset>
+       <legend>
+        <h4>
+         Output
+        </h4>
+       </legend>
+       <div class="content">
+        * 第1..??行: 输出FJ所能得到的字典序最小的队列。每行（除了最后一行）输出恰好80个'A'..'Z'中的字母，表示新队列中每头奶牛姓名的首字母
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="clearfix">
+    </div>
+    <div>
+     <div class="span6 well">
+      <fieldset>
+       <legend>
+        <h4>
+         Sample Input
+        </h4>
+       </legend>
+       <div class="content">
+        <pre style="border:none;font-size:110%">6
+
+A
+
+C
+
+D
+
+B
+
+C
+
+B
+
+</pre>
+       </div>
+       <!-- nl2br not needed in pre -->
+      </fieldset>
+     </div>
+     <div class="span6 well">
+      <fieldset>
+       <legend>
+        <h4>
+         Sample Output
+        </h4>
+       </legend>
+       <div class="content">
+        <pre style="border:none;font-size:110%">ABCBCD</pre>
+       </div>
+      </fieldset>
+     </div>
+    </div>
+    <div class="clearfix">
+    </div>
+    <div class="well">
+     <fieldset>
+      <legend>
+       <h4>
+        Data Constraint
+       </h4>
+      </legend>
+      <div class="content">
+      </div>
+     </fieldset>
+    </div>
+    <div class="clearfix">
+    </div>
+    <div class="well">
+     <fieldset>
+      <legend>
+       <h4>
+        Hint
+       </h4>
+      </legend>
+      <div class="content">
+       【样例解释】
+       <table border="1">
+        <tr>
+         <td>
+          操作数
+         </td>
+         <td>
+          原队列
+         </td>
+         <td>
+          新队列
+         </td>
+        </tr>
+        <tr>
+         <td>
+          #1
+         </td>
+         <td>
+          ACDBCB
+         </td>
+         <td>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          #2
+         </td>
+         <td>
+          CDBCB
+         </td>
+         <td>
+          A
+         </td>
+        </tr>
+        <tr>
+         <td>
+          #3
+         </td>
+         <td>
+          CDBC
+         </td>
+         <td>
+          AB
+         </td>
+        </tr>
+        <tr>
+         <td>
+          #4
+         </td>
+         <td>
+          CDB
+         </td>
+         <td>
+          ABC
+         </td>
+        </tr>
+        <tr>
+         <td>
+          #5
+         </td>
+         <td>
+          CD
+         </td>
+         <td>
+          ABCB
+         </td>
+        </tr>
+        <tr>
+         <td>
+          #6
+         </td>
+         <td>
+          D
+         </td>
+         <td>
+          ABCBC
+         </td>
+        </tr>
+        <br/>
+        <tr>
+         <td>
+          #7
+         </td>
+         <td>
+         </td>
+         <td>
+          ABCBCD
+         </td>
+        </tr>
+       </table>
+      </div>
+     </fieldset>
+    </div>
+   </div>
+  </div>
+ </div>
+ <div style="text-align:center">
+ </div>
+</div>
+
+<div class="row-fluid" style="margin-top:7px">
+ <div id="mainbar">
+  <div class="problem">
+   <div class="span12 well">
+    <fieldset>
+     <legend>
+      <h4>
+       Description
+      </h4>
+     </legend>
+     <div class="content">
+      FJ打算带他的N(1 &lt;= N &lt;= 30,000)头奶牛去参加一年一度的“全美农场主大奖赛”。在这场比赛中，每个参赛者都必须让他的奶牛排成一列，然后领她们从裁判席前依次走过。
+      <br/>
+      今年，竞赛委员会在接受队伍报名时，采用了一种新的登记规则：他们把所有队伍中奶牛名字的首字母取出，按它们对应奶牛在队伍中的次序排成一列（比如说，如果FJ带去的奶牛依次为Bessie、Sylvia、Dora，登记人员就把这支队伍登记为BSD）。登记结束后，组委会将所有队伍的登记名称按字典序升序排列，就得到了他们的出场顺序。
+      <br/>
+      FJ最近有一大堆事情，因此他不打算在这个比赛上浪费过多的时间，也就是说，他想尽可能早地出场。于是，他打算把奶牛们预先设计好的队型重新调整一下。
+      <br/>
+      FJ的调整方法是这样的：每次，他在原来队列的首端或是尾端牵出一头奶牛，把她安排到新队列的尾部，然后对剩余的奶牛队列重复以上的操作，直到所有奶牛都被插到了新的队列里。这样得到的队列，就是FJ拉去登记的最终的奶牛队列。
+      <br/>
+      接下来的事情就交给你了：对于给定的奶牛们的初始位置，计算出按照FJ的调整规则所可能得到的字典序最小的队列。
+      <br/>
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Input
+       </h4>
+      </legend>
+      <div class="content">
+       * 第1行: 一个整数：N
+       <br/>
+       * 第2..N+1行: 第i+1行仅有1个'A'..'Z'中的字母，表示队列中从前往后数第i头奶牛名字的首字母
+       <br/>
+      </div>
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Output
+       </h4>
+      </legend>
+      <div class="content">
+       * 第1..??行: 输出FJ所能得到的字典序最小的队列。每行（除了最后一行）输出恰好80个'A'..'Z'中的字母，表示新队列中每头奶牛姓名的首字母
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Input
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">6
+
+A
+
+C
+
+D
+
+B
+
+C
+
+B
+
+</pre>
+      </div>
+      <!-- nl2br not needed in pre -->
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Output
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">ABCBCD</pre>
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div class="well">
+    <fieldset>
+     <legend>
+      <h4>
+       Data Constraint
+      </h4>
+     </legend>
+     <div class="content">
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div class="well">
+    <fieldset>
+     <legend>
+      <h4>
+       Hint
+      </h4>
+     </legend>
+     <div class="content">
+      【样例解释】
+      <table border="1">
+       <tr>
+        <td>
+         操作数
+        </td>
+        <td>
+         原队列
+        </td>
+        <td>
+         新队列
+        </td>
+       </tr>
+       <tr>
+        <td>
+         #1
+        </td>
+        <td>
+         ACDBCB
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         #2
+        </td>
+        <td>
+         CDBCB
+        </td>
+        <td>
+         A
+        </td>
+       </tr>
+       <tr>
+        <td>
+         #3
+        </td>
+        <td>
+         CDBC
+        </td>
+        <td>
+         AB
+        </td>
+       </tr>
+       <tr>
+        <td>
+         #4
+        </td>
+        <td>
+         CDB
+        </td>
+        <td>
+         ABC
+        </td>
+       </tr>
+       <tr>
+        <td>
+         #5
+        </td>
+        <td>
+         CD
+        </td>
+        <td>
+         ABCB
+        </td>
+       </tr>
+       <tr>
+        <td>
+         #6
+        </td>
+        <td>
+         D
+        </td>
+        <td>
+         ABCBC
+        </td>
+       </tr>
+       <br/>
+       <tr>
+        <td>
+         #7
+        </td>
+        <td>
+        </td>
+        <td>
+         ABCBCD
+        </td>
+       </tr>
+      </table>
+     </div>
+    </fieldset>
+   </div>
+  </div>
+ </div>
+</div>
+
+<div class="row-fluid" style="margin-top:7px">
+ <div id="mainbar">
+  <div class="problem">
+   <div class="span12 well">
+    <fieldset>
+     <legend>
+      <h4>
+       Description
+      </h4>
+     </legend>
+     <div class="content">
+      FJ打算带他的N(1 &lt;= N &lt;= 30,000)头奶牛去参加一年一度的“全美农场主大奖赛”。在这场比赛中，每个参赛者都必须让他的奶牛排成一列，然后领她们从裁判席前依次走过。
+      <br/>
+      今年，竞赛委员会在接受队伍报名时，采用了一种新的登记规则：他们把所有队伍中奶牛名字的首字母取出，按它们对应奶牛在队伍中的次序排成一列（比如说，如果FJ带去的奶牛依次为Bessie、Sylvia、Dora，登记人员就把这支队伍登记为BSD）。登记结束后，组委会将所有队伍的登记名称按字典序升序排列，就得到了他们的出场顺序。
+      <br/>
+      FJ最近有一大堆事情，因此他不打算在这个比赛上浪费过多的时间，也就是说，他想尽可能早地出场。于是，他打算把奶牛们预先设计好的队型重新调整一下。
+      <br/>
+      FJ的调整方法是这样的：每次，他在原来队列的首端或是尾端牵出一头奶牛，把她安排到新队列的尾部，然后对剩余的奶牛队列重复以上的操作，直到所有奶牛都被插到了新的队列里。这样得到的队列，就是FJ拉去登记的最终的奶牛队列。
+      <br/>
+      接下来的事情就交给你了：对于给定的奶牛们的初始位置，计算出按照FJ的调整规则所可能得到的字典序最小的队列。
+      <br/>
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Input
+       </h4>
+      </legend>
+      <div class="content">
+       * 第1行: 一个整数：N
+       <br/>
+       * 第2..N+1行: 第i+1行仅有1个'A'..'Z'中的字母，表示队列中从前往后数第i头奶牛名字的首字母
+       <br/>
+      </div>
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Output
+       </h4>
+      </legend>
+      <div class="content">
+       * 第1..??行: 输出FJ所能得到的字典序最小的队列。每行（除了最后一行）输出恰好80个'A'..'Z'中的字母，表示新队列中每头奶牛姓名的首字母
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Input
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">6
+
+A
+
+C
+
+D
+
+B
+
+C
+
+B
+
+</pre>
+      </div>
+      <!-- nl2br not needed in pre -->
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Output
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">ABCBCD</pre>
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div class="well">
+    <fieldset>
+     <legend>
+      <h4>
+       Data Constraint
+      </h4>
+     </legend>
+     <div class="content">
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div class="well">
+    <fieldset>
+     <legend>
+      <h4>
+       Hint
+      </h4>
+     </legend>
+     <div class="content">
+      【样例解释】
+      <table border="1">
+       <tr>
+        <td>
+         操作数
+        </td>
+        <td>
+         原队列
+        </td>
+        <td>
+         新队列
+        </td>
+       </tr>
+       <tr>
+        <td>
+         #1
+        </td>
+        <td>
+         ACDBCB
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         #2
+        </td>
+        <td>
+         CDBCB
+        </td>
+        <td>
+         A
+        </td>
+       </tr>
+       <tr>
+        <td>
+         #3
+        </td>
+        <td>
+         CDBC
+        </td>
+        <td>
+         AB
+        </td>
+       </tr>
+       <tr>
+        <td>
+         #4
+        </td>
+        <td>
+         CDB
+        </td>
+        <td>
+         ABC
+        </td>
+       </tr>
+       <tr>
+        <td>
+         #5
+        </td>
+        <td>
+         CD
+        </td>
+        <td>
+         ABCB
+        </td>
+       </tr>
+       <tr>
+        <td>
+         #6
+        </td>
+        <td>
+         D
+        </td>
+        <td>
+         ABCBC
+        </td>
+       </tr>
+       <br/>
+       <tr>
+        <td>
+         #7
+        </td>
+        <td>
+        </td>
+        <td>
+         ABCBCD
+        </td>
+       </tr>
+      </table>
+     </div>
+    </fieldset>
+   </div>
+  </div>
+ </div>
+</div>
+
+
+<div style="text-align:center"></div>
+
+</div>
+						
+						<div class="clearfix"></div>
+					</div>
+					
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="clearfix"></div>
+		
+		<!-- footer -->
+		<div class="row-fluid">
+			<div class="span12" id="copyleft">
+				<label id="server_time">Server time: Mon Aug 10 2019 11:45:14 GMT+0800 (中国标准时间)</label>				<a href="https://github.com/roastduck/fortuna-oj" target="_blank">Fortuna OJ 项目</a><br>
+				Author: <a href="https://github.com/moreD" target="_blank">moreD</a>, <a href="https://github.com/roastduck" target="_blank">RD</a>;
+				Collaborator: <a href="https://github.com/tarawa" target="_blank">twilight</a>, <a href="https://github.com/mchobbylong" target="_blank">McHobby</a><br>
+				Powered by CodeIgniter / Bootstrap<br>
+				Icons provided by <a href="http://glyphicons.com/">Glyphicons</a><br>
+							</div>
+		</div>
+		
+	</div>
+	
+	<div class="overlay" style="z-index: -1000; display: none; opacity: 0;"></div>
+
+
+
+</body></html>

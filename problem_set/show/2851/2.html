@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)https://gmoj.net/senior/#contest -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+		
+		<title>Gold Medal Online Judge System</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Fortuna Online Judge System Default Framework">
+		<meta name="author" content="moreD">
+		
+
+		<link href="../../_files/bootstrap.min.css" rel="stylesheet">
+		<link href="../../_files/bootstrap-responsive.min.css" rel="stylesheet">
+		<link href="../../_files/style.css" rel="stylesheet">
+
+		<script> OJTitle = "Gold Medal Online Judge System"; </script>
+		
+		<style>.cke{visibility:hidden;}</style>	
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+			
+		<![endif]-->
+	</head>
+
+<body onload="init_framework()">
+	<div id="nav_toggle" class="well" style="padding: 2px; position:fixed; top: 35px; left:0px">
+		<i id="icon_nav_toggle" class="icon-arrow-left"></i>
+	</div>
+	<div id="scroll_tip" class="well affix-top" style="padding: 2px; position:fixed; right:0px; bottom:120px" onclick="javascript:scroll(0,0)">
+		<i class="icon-arrow-up"></i>
+	</div>
+	
+	<div class="container-fluid">
+		<div class="row-fluid">
+		
+			<!-- Header -->
+			<div class="span12">
+				<div class="well" style="padding: 7px; min-height:560px">
+					<div class="tabbable tabs-left">
+						<ul id="navigation" class="nav nav-tabs pull-left">
+							<li>
+								<label id="countdown"></label>
+							</li>
+							<li>
+								<div id="userinfo" style="display: block;">	<div class="mb_10">
+			<div style="text-align:center; padding:3px; margin: 0 auto" class="well">
+				<img src="../../images/avatar.gif">
+			</div>
+			<div style="text-align:center; margin: 3px auto 0">
+				<span class="label label-info">您已被强制离线</span>
+			</div>
+		</a>
+	</div>
+</div>
+								<div class="clearfix"></div>
+							<li class="nav_bar" id="nav_home">
+								<a href="../../index.html">主页</a>
+							</li>
+							<li class="nav_bar active" id="nav_contest">
+								<a href="../../problem_set.html">比赛</a>
+							</li>
+						</ul>
+						
+						<div id="page_content" class="tab-content" style="float: none; display: block;"><link href="_files/tablewithpin.css" rel="stylesheet">
+							<div class="navbar">
+	<div class="navbar-inner">
+		<ul class="nav">
+			<li><a href="../../problem_set.html"><img src="../../images/narrow-left.png" width="17" height="17"></a></li>
+			<li><a href="../home/2851">主页</a></li>
+            <li><a href="../../problem_set.html">题目</a></li>		</ul>
+	</div>
+</div>
+
+<div class="row-fluid">
+ <div id="header">
+  <div style="text-align:center">
+   <h2>
+    3457. 【NOIP2013模拟联考3】沙耶的玩偶(doll)
+    <sub>
+     (Standard IO)
+    </sub>
+   </h2>
+   <div>
+    Time Limits:
+    <span class="badge badge-info">
+     1000 ms
+    </span>
+    Memory Limits:
+    <span class="badge badge-info">
+     131072 KB
+    </span>
+   </div>
+  </div>
+ </div>
+</div>
+
+<div class="row-fluid" style="margin-top:7px">
+ <div id="mainbar">
+  <div class="problem">
+   <div class="span12 well">
+    <fieldset>
+     <legend>
+      <h4>
+       Description
+      </h4>
+     </legend>
+     <div class="content">
+      在美鱼和理树后援团拯救世界的同时，外表柔弱的理树也开始坚强起来，思考着离开这个世界的办法。误打误撞地，她遇上了正在教室破坏课桌打开迷宫入口的沙耶。沙耶告诉理树，这个世界的出口就是这个迷宫的出口。于是理树毫不犹豫地跟沙耶一起跳进了迷宫。在迷宫里，两个女孩子互帮互助，一会儿割绳子，一会儿泡温泉，一会儿雕冰块，跌跌撞撞地走到了终点。不出所料，终点也有一个机关在等着她们。
+      <br/>
+      <br/>
+      终点的机关是一个立着的m*n 的方格棋盘，在有些格子上放了一个玩偶，而有些地方直接挖了个大坑。只有取走所有玩偶才能打开出口。但是，由于奇怪的设定，理树和沙耶不能直接触碰玩偶，他们需要操纵机器人来收集它。机器人的走法很奇怪，和国际象棋的马有点像，只不过马可以走任意方向的1*2 路线，它们只会由上往下走r*c(或c*r)的路线，不能回头。而机器人一旦经过一个有玩偶的格子，那个格子上的玩偶将被回收，并且在机器人离开时，那个格子会变成一个坑。理树可以把机器人放在任何一个有玩偶的格子上作为起点，也可以在任何一个有玩偶的格子回收机器人。机器人行走可以视为瞬移，只不过每一次设置新起点都会消耗1 时间。并且，有坑的格子不能落脚。
+      <br/>
+      <br/>
+      就在这个紧要关头，玩偶狂热爱好者的沙耶却流着口水智商归0。理树不得不转而求助你，帮忙计算出最少多少时间就能收集到所有玩偶。
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Input
+       </h4>
+      </legend>
+      <div class="content">
+       第一行包含4 个整数M、N、R、C，意义见问题描述。接下来M 行每行一个长度为N 的
+       <br/>
+       <br/>
+       字符串。如果某个字符是'.'，表示这个地方有一个玩偶；如果这个字符是'x'，表示这个地
+       <br/>
+       <br/>
+       方是坑。
+      </div>
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Output
+       </h4>
+      </legend>
+      <div class="content">
+       输出一个整数，表示最短时间。
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Input
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">3 3 1 2<br/>
+...<br/>
+.x.<br/>
+...</pre>
+      </div>
+      <!-- nl2br not needed in pre -->
+     </fieldset>
+    </div>
+    <div class="span6 well">
+     <fieldset>
+      <legend>
+       <h4>
+        Sample Output
+       </h4>
+      </legend>
+      <div class="content">
+       <pre style="border:none;font-size:110%">4</pre>
+      </div>
+     </fieldset>
+    </div>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div class="well">
+    <fieldset>
+     <legend>
+      <h4>
+       Data Constraint
+      </h4>
+     </legend>
+     <div class="content">
+      30%的数据中，1&lt;=M,N&lt;=4，1&lt;=R,C&lt;=3。
+      <br/>
+      <br/>
+      70%的数据中，1&lt;=M&lt;=20，1&lt;=N&lt;=4，1&lt;=R,C&lt;=3。
+      <br/>
+      <br/>
+      100%的数据中，1&lt;=M,N&lt;=50，1&lt;=R,C&lt;=10。
+     </div>
+    </fieldset>
+   </div>
+   <div class="clearfix">
+   </div>
+   <div class="well">
+    <fieldset>
+     <legend>
+      <h4>
+       Hint
+      </h4>
+     </legend>
+     <div class="content">
+      <img alt="" src="data:image/png;base64,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" style="height:177px; width:194px"/>
+     </div>
+    </fieldset>
+   </div>
+  </div>
+ </div>
+</div>
+
+
+<div style="text-align:center"></div>
+
+</div>
+						
+						<div class="clearfix"></div>
+					</div>
+					
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="clearfix"></div>
+		
+		<!-- footer -->
+		<div class="row-fluid">
+			<div class="span12" id="copyleft">
+				<label id="server_time">Server time: Mon Aug 10 2019 11:45:14 GMT+0800 (中国标准时间)</label>				<a href="https://github.com/roastduck/fortuna-oj" target="_blank">Fortuna OJ 项目</a><br>
+				Author: <a href="https://github.com/moreD" target="_blank">moreD</a>, <a href="https://github.com/roastduck" target="_blank">RD</a>;
+				Collaborator: <a href="https://github.com/tarawa" target="_blank">twilight</a>, <a href="https://github.com/mchobbylong" target="_blank">McHobby</a><br>
+				Powered by CodeIgniter / Bootstrap<br>
+				Icons provided by <a href="http://glyphicons.com/">Glyphicons</a><br>
+							</div>
+		</div>
+		
+	</div>
+	
+	<div class="overlay" style="z-index: -1000; display: none; opacity: 0;"></div>
+
+
+
+</body></html>
